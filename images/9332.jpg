@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<meta name="theme-color" content="#dd3333"/>	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	        <script type="text/javascript">
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                var originalAddEventListener = EventTarget.prototype.addEventListener,
+                    oldWidth = window.innerWidth;
+
+                EventTarget.prototype.addEventListener = function (eventName, eventHandler, useCapture) {
+                    if (eventName === "resize") {
+                        originalAddEventListener.call(this, eventName, function (event) {
+                            if (oldWidth === window.innerWidth) {
+                                return;
+                            }
+                            else if (oldWidth !== window.innerWidth) {
+                                oldWidth = window.innerWidth;
+                            }
+                            if (eventHandler.handleEvent) {
+                                eventHandler.handleEvent.call(this, event);
+                            }
+                            else {
+                                eventHandler.call(this, event);
+                            };
+                        }, useCapture);
+                    }
+                    else {
+                        originalAddEventListener.call(this, eventName, eventHandler, useCapture);
+                    };
+                };
+            };
+        </script>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+			<style>
+			.fuse_social_icons_links {
+			    display: block;
+			}
+			.awesome-social-img img {
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%,-50%);
+			}
+
+			.awesome-social-img {
+			    position: relative;
+			}			
+			.icon_wrapper .awesome-social {
+			    font-family: 'FontAwesome' !important;
+			}
+			#icon_wrapper .fuse_social_icons_links .awesome-social {
+			    font-family: "FontAwesome" !important;
+			    ext-rendering: auto !important;
+			    -webkit-font-smoothing: antialiased !important;
+			    -moz-osx-font-smoothing: grayscale !important;
+			}
+									
+			
+			#icon_wrapper{
+				position: fixed;
+				top: 50%;
+				left: 0px;
+				z-index: 99999;
+			}
+			
+			.awesome-social
+
+			{
+
+            margin-top:2px;
+
+			color: #fff !important;
+
+			text-align: center !important;
+
+			display: block;
+
+			
+			line-height: 51px !important;
+
+			width: 48px !important;
+
+			height: 48px !important;
+
+			font-size: 28px !important;
+
+			
+				-moz-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* For Safari 3.1 to 6.0 */
+
+
+
+				-webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* For Safari 3.1 to 6.0 */
+
+				transition: width 0.5s, height 0.5s, transform 0.5s;
+
+
+
+				
+
+
+			}
+
+			
+			.awesome-social:hover
+
+			{
+
+
+
+			-webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+
+				transform: rotate(deg);
+
+					-moz-transform: rotate(360deg); /* Chrome, Safari, Opera */
+
+							-ms-transform: rotate(360deg); /* Chrome, Safari, Opera */
+
+
+
+			}
+
+				
+			.fuse_social_icons_links
+
+			{
+
+			outline:0 !important;
+
+
+
+			}
+
+			.fuse_social_icons_links:hover{
+
+			text-decoration:none !important;
+
+			}
+
+			
+			.fb-awesome-social
+
+			{
+
+			background: #3b5998;
+			border-color: #3b5998;
+			
+			}
+			.facebook-awesome-social
+
+			{
+
+			background: #3b5998;
+			border-color: #3b5998;
+						}
+
+
+			.tw-awesome-social
+
+			{
+
+			background:#00aced;
+			border-color: #00aced;
+			
+			}
+			.twitter-awesome-social
+
+			{
+
+			background:#00aced;
+			border-color: #00aced;
+			
+			}
+			.rss-awesome-social
+
+			{
+
+			background:#FA9B39;
+			border-color: #FA9B39;
+			
+			}
+
+			.linkedin-awesome-social
+
+			{
+
+			background:#007bb6;
+			border-color: #007bb6;
+						}
+
+			.youtube-awesome-social
+
+			{
+
+			background:#bb0000;
+			border-color: #bb0000;
+						}
+
+			.flickr-awesome-social
+
+			{
+
+			background: #ff0084;
+			border-color: #ff0084;
+						}
+
+			.pinterest-awesome-social
+
+			{
+
+			background:#cb2027;
+			border-color: #cb2027;
+						}
+
+			.stumbleupon-awesome-social
+
+			{
+
+			background:#f74425 ;
+			border-color: #f74425;
+						}
+
+			.google-plus-awesome-social
+
+			{
+
+			background:#f74425 ;
+			border-color: #f74425;
+						}
+
+			.instagram-awesome-social
+
+			{
+
+			    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+			    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+			    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+			    border-color: #f09433;
+					    
+
+			}
+
+			.tumblr-awesome-social
+
+			{
+
+			background: #32506d ;
+			border-color: #32506d;
+						}
+
+			.vine-awesome-social
+
+			{
+
+			background: #00bf8f ;
+			border-color: #00bf8f;
+						}
+
+            .vk-awesome-social {
+
+
+
+            background: #45668e ;
+            border-color: #45668e;
+            
+            }
+
+            .soundcloud-awesome-social
+
+                {
+
+            background: #ff3300 ;
+            border-color: #ff3300;
+            
+                }
+
+                .reddit-awesome-social{
+
+
+
+            background: #ff4500 ;
+            border-color: #ff4500;
+
+                            }
+
+                .stack-awesome-social{
+
+
+
+            background: #fe7a15 ;
+            border-color: #fe7a15;
+            
+                }
+
+                .behance-awesome-social{
+
+            background: #1769ff ;
+            border-color: #1769ff;
+            
+                }
+
+                .github-awesome-social{
+
+            background: #999999 ;
+            border-color: #999999;
+            
+
+
+                }
+
+                .envelope-awesome-social{
+
+                  background: #ccc ;
+ 				  border-color: #ccc;                 
+ 				                  }
+
+/*  Mobile */
+
+
+
+
+
+
+/* Custom Background */
+
+
+             
+
+
+
+
+			</style>
+
+<style>
+#wpadminbar #wp-admin-bar-wsm_free_top_button .ab-icon:before {
+	content: "\f239";
+	color: #FF9800;
+	top: 3px;
+}
+</style>
+	<!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Packers and movers Kenya Ltd | Best movers in Nairobi Kenya | Call +254 722 644 270</title>
+	<meta name="description" content="Packers and movers Kenya Ltd is one of the top moving companies in Kenya.Our services include Office relocation, Settling in Services,House Shifting,Storage" />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://packersandmoversltd.co.ke/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Packers and movers Kenya Ltd | Best movers in Nairobi Kenya | Call +254 722 644 270" />
+	<meta property="og:description" content="Packers and movers Kenya Ltd is one of the top moving companies in Kenya.Our services include Office relocation, Settling in Services,House Shifting,Storage" />
+	<meta property="og:url" content="https://packersandmoversltd.co.ke/" />
+	<meta property="og:site_name" content="Packers and movers Kenya Ltd | Best movers in Nairobi Kenya" />
+	<meta property="article:publisher" content="https://www.facebook.com/PackersandMoversKenyaltd/" />
+	<meta property="article:modified_time" content="2020-08-02T12:34:54+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="5 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://packersandmoversltd.co.ke/#website","url":"https://packersandmoversltd.co.ke/","name":"Packers and movers Kenya Ltd | Best movers in Nairobi Kenya","description":"&quot;Relocation wizards&quot;","potentialAction":[{"@type":"SearchAction","target":"https://packersandmoversltd.co.ke/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en"},{"@type":"WebPage","@id":"https://packersandmoversltd.co.ke/#webpage","url":"https://packersandmoversltd.co.ke/","name":"Packers and movers Kenya Ltd | Best movers in Nairobi Kenya | Call +254 722 644 270","isPartOf":{"@id":"https://packersandmoversltd.co.ke/#website"},"datePublished":"2016-06-14T00:53:06+00:00","dateModified":"2020-08-02T12:34:54+00:00","description":"Packers and movers Kenya Ltd is one of the top moving companies in Kenya.Our services include Office relocation, Settling in Services,House Shifting,Storage","inLanguage":"en","potentialAction":[{"@type":"ReadAction","target":["https://packersandmoversltd.co.ke/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Packers and movers Kenya Ltd | Best movers in Nairobi Kenya &raquo; Feed" href="https://packersandmoversltd.co.ke/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Packers and movers Kenya Ltd | Best movers in Nairobi Kenya &raquo; Comments Feed" href="https://packersandmoversltd.co.ke/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/packersandmoversltd.co.ke\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='export-wp-page-to-static-html-css'  href='https://packersandmoversltd.co.ke/wp-content/plugins/export-wp-page-to-static-html/public/css/export-wp-page-to-static-html-public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='https://packersandmoversltd.co.ke/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.2.23' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='wsm-style-css'  href='https://packersandmoversltd.co.ke/wp-content/plugins/wp-stats-manager/css/style.css?ver=1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='qlwapp-css'  href='https://packersandmoversltd.co.ke/wp-content/plugins/wp-whatsapp-chat/assets/frontend/css/frontend.css?ver=4.7.7' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='https://packersandmoversltd.co.ke/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-web-fonts-css'  href='https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans:400,600,700|Raleway:400,600,700|Roboto:400,600,700' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-main-css'  href='https://packersandmoversltd.co.ke/wp-content/themes/dt-the7/css/main.min.css?ver=9.1.0' type='text/css' media='all' />
+<style id='dt-main-inline-css' type='text/css'>
+body #load {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 9901;
+  opacity: 1;
+  visibility: visible;
+  transition: all .35s ease-out;
+}
+.load-wrap {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.load-wrap > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#load {
+  background-color: #ffffff;
+}
+.uil-default rect:not(.bk) {
+  fill: #ffc000;
+}
+.uil-ring > path {
+  fill: #ffc000;
+}
+.ring-loader .circle {
+  fill: #ffc000;
+}
+.ring-loader .moving-circle {
+  fill: #ffc000;
+}
+.uil-hourglass .glass {
+  stroke: #ffc000;
+}
+.uil-hourglass .sand {
+  fill: #ffc000;
+}
+.spinner-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg width='75px' height='75px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='uil-default'%3E%3Crect x='0' y='0' width='100' height='100' fill='none' class='bk'%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(0 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(30 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.08333333333333333s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(60 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.16666666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(90 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.25s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(120 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.3333333333333333s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(150 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.4166666666666667s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(180 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(210 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5833333333333334s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(240 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.6666666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(270 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.75s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(300 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.8333333333333334s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(330 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.9166666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E");
+}
+.ring-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='72' height='72' fill='%23ffc000'%3E   %3Cpath opacity='.25' d='M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4'/%3E   %3Cpath d='M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z'%3E     %3CanimateTransform attributeName='transform' type='rotate' from='0 16 16' to='360 16 16' dur='0.8s' repeatCount='indefinite' /%3E   %3C/path%3E %3C/svg%3E");
+}
+.hourglass-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='72' height='72' fill='%23ffc000'%3E   %3Cpath transform='translate(2)' d='M0 12 V20 H4 V12z'%3E      %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline'  /%3E   %3C/path%3E   %3Cpath transform='translate(8)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.2' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline'  /%3E   %3C/path%3E   %3Cpath transform='translate(14)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.4' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E   %3Cpath transform='translate(20)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.6' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E   %3Cpath transform='translate(26)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.8' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E %3C/svg%3E");
+}
+
+</style>
+<link rel='stylesheet' id='the7-font-css'  href='https://packersandmoversltd.co.ke/wp-content/themes/dt-the7/fonts/icomoon-the7-font/icomoon-the7-font.min.css?ver=9.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-custom-css'  href='https://packersandmoversltd.co.ke/wp-content/uploads/the7-css/custom.css?ver=8416e3b95a64' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-media-css'  href='https://packersandmoversltd.co.ke/wp-content/uploads/the7-css/media.css?ver=8416e3b95a64' type='text/css' media='all' />
+<link rel='stylesheet' id='the7-mega-menu-css'  href='https://packersandmoversltd.co.ke/wp-content/uploads/the7-css/mega-menu.css?ver=8416e3b95a64' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='https://packersandmoversltd.co.ke/wp-content/themes/dt-the7/style.css?ver=9.1.0' type='text/css' media='all' />
+		<script>
+			/* <![CDATA[ */
+			var rcewpp = {
+				"ajax_url":"https://packersandmoversltd.co.ke/wp-admin/admin-ajax.php",
+				"nonce": "695881146a",
+				"home_url": "https://packersandmoversltd.co.ke"
+			};
+			/* ]]\> */
+		</script>
+		<script type='text/javascript' src='https://packersandmoversltd.co.ke/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://packersandmoversltd.co.ke/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://packersandmoversltd.co.ke/wp-content/plugins/export-wp-page-to-static-html/public/js/export-wp-page-to-static-html-public.js?ver=1.0.0' id='export-wp-page-to-static-html-js'></script>
+<script type='text/javascript' id='fuse-social-script-js-extra'>
+/* <![CDATA[ */
+var fuse_social = {"ajax_url":"https:\/\/packersandmoversltd.co.ke\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://packersandmoversltd.co.ke/wp-content/plugins/fuse-social-floating-sidebar/inc//js/fuse_script.js?ver=1138368567' id='fuse-social-script-js'></script>
+<script type='text/javascript' src='https://packersandmoversltd.co.ke/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.2.23' id='tp-tools-js'></script>
+<script type='text/javascript' src='https://packersandmoversltd.co.ke/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.2.23' id='revmin-js'></script>
+<script type='text/javascript' id='dt-above-fold-js-extra'>
+/* <![CDATA[ */
+var dtLocal = {"themeUrl":"https:\/\/packersandmoversltd.co.ke\/wp-content\/themes\/dt-the7","passText":"To view this protected post, enter the password below:","moreButtonText":{"loading":"Loading...","loadMore":"Load more"},"postID":"1207","ajaxurl":"https:\/\/packersandmoversltd.co.ke\/wp-admin\/admin-ajax.php","REST":{"baseUrl":"https:\/\/packersandmoversltd.co.ke\/wp-json\/the7\/v1","endpoints":{"sendMail":"\/send-mail"}},"contactMessages":{"required":"One or more fields have an error. Please check and try again.","terms":"Please accept the privacy policy.","fillTheCaptchaError":"Please, fill the captcha."},"captchaSiteKey":"6LdEbqMZAAAAAIWKmhcx7RhJhIGOYI0J7tDXaLM2","ajaxNonce":"1cab436689","pageData":{"type":"page","template":"page","layout":null},"themeSettings":{"smoothScroll":"off","lazyLoading":false,"accentColor":{"mode":"solid","color":"#dd3333"},"desktopHeader":{"height":100},"ToggleCaptionEnabled":"disabled","ToggleCaption":"Navigation","floatingHeader":{"showAfter":140,"showMenu":true,"height":70,"logo":{"showLogo":true,"html":"<img class=\" preload-me\" src=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg\" srcset=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w, https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w\" width=\"267\" height=\"48\"   sizes=\"267px\" alt=\"Packers and movers Kenya Ltd | Best movers in Nairobi Kenya\" \/>","url":"https:\/\/packersandmoversltd.co.ke\/"}},"topLine":{"floatingTopLine":{"logo":{"showLogo":false,"html":""}}},"mobileHeader":{"firstSwitchPoint":992,"secondSwitchPoint":778,"firstSwitchPointHeight":60,"secondSwitchPointHeight":60,"mobileToggleCaptionEnabled":"disabled","mobileToggleCaption":"Menu"},"stickyMobileHeaderFirstSwitch":{"logo":{"html":"<img class=\" preload-me\" src=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg\" srcset=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w, https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w\" width=\"267\" height=\"48\"   sizes=\"267px\" alt=\"Packers and movers Kenya Ltd | Best movers in Nairobi Kenya\" \/>"}},"stickyMobileHeaderSecondSwitch":{"logo":{"html":"<img class=\" preload-me\" src=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/Untitled-2.jpg\" srcset=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/Untitled-2.jpg 219w, https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/Untitled-2.jpg 219w\" width=\"219\" height=\"51\"   sizes=\"219px\" alt=\"Packers and movers Kenya Ltd | Best movers in Nairobi Kenya\" \/>"}},"content":{"textColor":"#000000","headerColor":"#000000"},"sidebar":{"switchPoint":990},"boxedWidth":"1280px","stripes":{"stripe1":{"textColor":"#828282","headerColor":"#303030"},"stripe2":{"textColor":"#ffffff","headerColor":"#ffffff"},"stripe3":{"textColor":"#ffffff","headerColor":"#ffffff"}}},"VCMobileScreenWidth":"768"};
+var dtShare = {"shareButtonText":{"facebook":"Share on Facebook","twitter":"Tweet","pinterest":"Pin it","linkedin":"Share on Linkedin","whatsapp":"Share on Whatsapp"},"overlayOpacity":"85"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://packersandmoversltd.co.ke/wp-content/themes/dt-the7/js/above-the-fold.min.js?ver=9.1.0' id='dt-above-fold-js'></script>
+<link rel="https://api.w.org/" href="https://packersandmoversltd.co.ke/wp-json/" /><link rel="alternate" type="application/json" href="https://packersandmoversltd.co.ke/wp-json/wp/v2/pages/1207" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://packersandmoversltd.co.ke/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://packersandmoversltd.co.ke/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel='shortlink' href='https://packersandmoversltd.co.ke/' />
+<link rel="alternate" type="application/json+oembed" href="https://packersandmoversltd.co.ke/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpackersandmoversltd.co.ke%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://packersandmoversltd.co.ke/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpackersandmoversltd.co.ke%2F&#038;format=xml" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178057792-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-178057792-1');
+</script><!-- Wordpress Stats Manager -->
+    <script type="text/javascript">
+          var _wsm = _wsm || [];
+           _wsm.push(['trackPageView']);
+           _wsm.push(['enableLinkTracking']);
+           _wsm.push(['enableHeartBeatTimer']);
+          (function() {
+            var u="https://packersandmoversltd.co.ke/wp-content/plugins/wp-stats-manager/";
+            _wsm.push(['setUrlReferrer', ""]);
+            _wsm.push(['setTrackerUrl',"https://packersandmoversltd.co.ke/?wmcAction=wmcTrack"]);
+            _wsm.push(['setSiteId', "1"]);
+            _wsm.push(['setPageId', "1207"]);
+            _wsm.push(['setWpUserId', "0"]);           
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/wsm_new.js'; s.parentNode.insertBefore(g,s);
+          })();
+    </script>
+    <!-- End Wordpress Stats Manager Code --><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<meta name="generator" content="Powered by Slider Revolution 6.2.23 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) { 
+	var load = document.getElementById("load");
+	if(!load.classList.contains('loader-removed')){
+		var removeLoading = setTimeout(function() {
+			load.className += " loader-removed";
+		}, 300);
+	}
+});
+</script>
+		<link rel="icon" href="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/favicon-1.jpg" type="image/jpeg" sizes="16x16"/><link rel="apple-touch-icon" href="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/favicon-1.jpg"><link rel="apple-touch-icon" sizes="76x76" href="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/favicon-1.jpg"><link rel="apple-touch-icon" sizes="120x120" href="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/favicon-1.jpg"><link rel="apple-touch-icon" sizes="152x152" href="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/favicon-1.jpg"><script type="text/javascript">function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {				 
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;	
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;	
+				try {								
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);		
+					if(e.layout==="fullscreen" || e.l==="fullscreen") 						
+						newh = Math.max(e.mh,window.RSIH);					
+					else{					
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];					
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,						
+							sl;					
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;					
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];									
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}															
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);					
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}				
+					if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));					
+					document.getElementById(e.c).height = newh+"px";
+					window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";				
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}					   
+			//});
+		  };</script>
+            <style>
+              :root { 
+                --qlwapp-scheme-brand:#81d742;--qlwapp-scheme-qlwapp_scheme_form_nonce:057342f9ed;--qlwapp-scheme-_wp_http_referer:/wp-admin/admin.php?page=qlwapp_scheme;              }
+                                #qlwapp .qlwapp-toggle,
+                  #qlwapp .qlwapp-box .qlwapp-header,
+                  #qlwapp .qlwapp-box .qlwapp-user,
+                  #qlwapp .qlwapp-box .qlwapp-user:before {
+                    background-color: var(--qlwapp-scheme-brand);  
+                  }
+                                        </style>
+            <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1591553867646{padding-top: 70px !important;padding-bottom: 30px !important;}.vc_custom_1493832879938{padding-top: 70px !important;padding-bottom: 30px !important;}.vc_custom_1596099924373{padding-bottom: 30px !important;}.vc_custom_1493730770993{padding-bottom: 50px !important;}.vc_custom_1493730766899{padding-bottom: 50px !important;}.vc_custom_1493730776714{padding-bottom: 50px !important;}.vc_custom_1595719999116{padding-top: -20px !important;padding-bottom: 0px !important;}.vc_custom_1595720020300{padding-top: -5px !important;padding-bottom: 0px !important;}.vc_custom_1595720041426{padding-top: -5px !important;padding-bottom: 0px !important;}.vc_custom_1493730770993{padding-bottom: 50px !important;}.vc_custom_1493730766899{padding-bottom: 50px !important;}.vc_custom_1493730776714{padding-bottom: 50px !important;}.vc_custom_1595720448037{padding-top: -20px !important;padding-bottom: 0px !important;}.vc_custom_1595720466675{padding-top: -5px !important;padding-bottom: 0px !important;}.vc_custom_1595720484440{padding-top: -5px !important;padding-bottom: 0px !important;}.vc_custom_1596099949760{padding-bottom: 5px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<body class="home page-template-default page page-id-1207 wp-embed-responsive slideshow-on dt-responsive-on ouside-mobile-menu-close-icon ouside-menu-close-icon mobile-hamburger-close-bg-enable mobile-hamburger-close-bg-hover-enable  fade-medium-mobile-menu-close-icon fade-small-menu-close-icon srcset-enabled btn-3d custom-btn-color custom-btn-hover-color phantom-sticky phantom-shadow-decoration phantom-main-logo-on sticky-mobile-header top-header first-switch-logo-left first-switch-menu-right second-switch-logo-left second-switch-menu-right layzr-loading-on popup-message-style the7-ver-9.1.0 wpb-js-composer js-comp-ver-6.4.0 vc_responsive">
+<!-- The7 9.1.0 -->
+<div id="load" class="ring-loader">
+	<div class="load-wrap"></div>
+</div>
+<div id="page" >
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+<div class="masthead inline-header right widgets full-height shadow-decoration shadow-mobile-header-decoration medium-mobile-menu-icon mobile-menu-icon-bg-on mobile-menu-icon-hover-bg-on show-mobile-logo"  role="banner">
+
+	<div class="top-bar full-width-line top-bar-line-hide">
+	<div class="top-bar-bg" ></div>
+	<div class="left-widgets mini-widgets"><div class="text-area hide-on-desktop near-logo-first-switch in-menu-second-switch"><p>Follow us</p>
+</div><div class="soc-ico hide-on-desktop in-menu-first-switch in-menu-second-switch custom-bg disabled-border border-off hover-accent-bg hover-disabled-border  hover-border-off"><a title="Facebook page opens in new window" href="https://web.facebook.com/PackersandMoversKenyaltd/" target="_blank" class="facebook"><span class="soc-font-icon"></span><span class="screen-reader-text">Facebook page opens in new window</span></a><a title="Instagram page opens in new window" href="https://web.facebook.com/PackersandMoversKenyaltd/" target="_blank" class="instagram"><span class="soc-font-icon"></span><span class="screen-reader-text">Instagram page opens in new window</span></a></div></div><div class="right-widgets mini-widgets"><a href="https://packersandmoversltd.co.ke/contact-us/" class="mini-contacts phone show-on-desktop in-top-bar-left in-top-bar" ><i class=" icomoon-the7-font-the7-phone-05"></i>Nairobi +254 722 644 270</a><a href="https://packersandmoversltd.co.ke/contact-us/" class="mini-contacts multipurpose_2 show-on-desktop in-top-bar-left in-top-bar" ><i class=" icomoon-the7-font-the7-phone-05"></i>Mombasa +254 722 886 275</a><a href="https://packersandmoversltd.co.ke/contact-us/" class="mini-contacts email show-on-desktop in-top-bar-left in-top-bar" ><i class=" the7-mw-icon-mail"></i>info@packersandmoversltd.co.ke</a></div></div>
+
+	<header class="header-bar">
+
+		<div class="branding">
+	<div id="site-title" class="assistive-text">Packers and movers Kenya Ltd | Best movers in Nairobi Kenya</div>
+	<div id="site-description" class="assistive-text">&quot;Relocation wizards&quot;</div>
+	<a class="same-logo" href="https://packersandmoversltd.co.ke/"><img class=" preload-me" src="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/PACKERS-AND-MOVERS-LOGO-3-B.jpg" srcset="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w" width="267" height="48"   sizes="267px" alt="Packers and movers Kenya Ltd | Best movers in Nairobi Kenya" /><img class="mobile-logo preload-me" src="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Untitled-2.jpg" srcset="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Untitled-2.jpg 219w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Untitled-2.jpg 219w" width="219" height="51"   sizes="219px" alt="Packers and movers Kenya Ltd | Best movers in Nairobi Kenya" /></a></div>
+
+		<ul id="primary-menu" class="main-nav underline-decoration upwards-line level-arrows-on outside-item-remove-margin" role="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1207 current_page_item menu-item-1597 act first"><a href='https://packersandmoversltd.co.ke/' data-level='1'><span class="menu-item-text"><span class="menu-text">Home</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1598"><a href='https://packersandmoversltd.co.ke/about-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">About Us</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1599 has-children"><a href='https://packersandmoversltd.co.ke/services/' class='not-clickable-item' data-level='1'><span class="menu-item-text"><span class="menu-text">Services</span></span></a><ul class="sub-nav level-arrows-on"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1475 first"><a href='https://packersandmoversltd.co.ke/domestic-house-shifting/' data-level='2'><span class="menu-item-text"><span class="menu-text">Domestic House Shifting</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1476"><a href='https://packersandmoversltd.co.ke/office-relocations/' data-level='2'><span class="menu-item-text"><span class="menu-text">Office Relocations</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1478"><a href='https://packersandmoversltd.co.ke/settling-in-services-2/' data-level='2'><span class="menu-item-text"><span class="menu-text">Settling in Services</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1602"><a href='https://packersandmoversltd.co.ke/cross-border-moves/' data-level='2'><span class="menu-item-text"><span class="menu-text">Cross Border Moves</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1600"><a href='https://packersandmoversltd.co.ke/international-relocation/' data-level='2'><span class="menu-item-text"><span class="menu-text">International relocation</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601"><a href='https://packersandmoversltd.co.ke/storage/' data-level='2'><span class="menu-item-text"><span class="menu-text">Storage</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1474"><a href='https://packersandmoversltd.co.ke/blog/' data-level='1'><span class="menu-item-text"><span class="menu-text">Blog</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1718 has-children"><a href='https://packersandmoversltd.co.ke/resource-center/' class='not-clickable-item' data-level='1'><span class="menu-item-text"><span class="menu-text">Resource center</span></span></a><ul class="sub-nav level-arrows-on"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1755 first"><a href='https://packersandmoversltd.co.ke/privacy-policy/' data-level='2'><span class="menu-item-text"><span class="menu-text">Privacy policy</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1758"><a href='https://packersandmoversltd.co.ke/returning-residents-guide/' data-level='2'><span class="menu-item-text"><span class="menu-text">Returning Residents guide</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1477"><a href='https://packersandmoversltd.co.ke/contact-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">Contact us</span></span></a></li> </ul>
+		<div class="mini-widgets"><a href="https://packersandmoversltd.co.ke/quotation/" class="microwidget-btn mini-button header-elements-button-2 show-on-desktop near-logo-first-switch in-menu-second-switch microwidget-btn-bg-on microwidget-btn-hover-bg-on border-on hover-border-on btn-icon-align-right" target="_blank"><span>QUOTATION</span></a></div>
+	</header>
+
+</div>
+<div class="dt-close-mobile-menu-icon"><div class="close-line-wrap"><span class="close-line"></span><span class="close-line"></span><span class="close-line"></span></div></div><div class="dt-mobile-header mobile-menu-show-divider">
+		<ul id="mobile-menu" class="mobile-main-nav" role="navigation">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1207 current_page_item menu-item-1597 act first"><a href='https://packersandmoversltd.co.ke/' data-level='1'><span class="menu-item-text"><span class="menu-text">Home</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1598"><a href='https://packersandmoversltd.co.ke/about-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">About Us</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1599 has-children"><a href='https://packersandmoversltd.co.ke/services/' class='not-clickable-item' data-level='1'><span class="menu-item-text"><span class="menu-text">Services</span></span></a><ul class="sub-nav level-arrows-on"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1475 first"><a href='https://packersandmoversltd.co.ke/domestic-house-shifting/' data-level='2'><span class="menu-item-text"><span class="menu-text">Domestic House Shifting</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1476"><a href='https://packersandmoversltd.co.ke/office-relocations/' data-level='2'><span class="menu-item-text"><span class="menu-text">Office Relocations</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1478"><a href='https://packersandmoversltd.co.ke/settling-in-services-2/' data-level='2'><span class="menu-item-text"><span class="menu-text">Settling in Services</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1602"><a href='https://packersandmoversltd.co.ke/cross-border-moves/' data-level='2'><span class="menu-item-text"><span class="menu-text">Cross Border Moves</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1600"><a href='https://packersandmoversltd.co.ke/international-relocation/' data-level='2'><span class="menu-item-text"><span class="menu-text">International relocation</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601"><a href='https://packersandmoversltd.co.ke/storage/' data-level='2'><span class="menu-item-text"><span class="menu-text">Storage</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1474"><a href='https://packersandmoversltd.co.ke/blog/' data-level='1'><span class="menu-item-text"><span class="menu-text">Blog</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1718 has-children"><a href='https://packersandmoversltd.co.ke/resource-center/' class='not-clickable-item' data-level='1'><span class="menu-item-text"><span class="menu-text">Resource center</span></span></a><ul class="sub-nav level-arrows-on"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1755 first"><a href='https://packersandmoversltd.co.ke/privacy-policy/' data-level='2'><span class="menu-item-text"><span class="menu-text">Privacy policy</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1758"><a href='https://packersandmoversltd.co.ke/returning-residents-guide/' data-level='2'><span class="menu-item-text"><span class="menu-text">Returning Residents guide</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1477"><a href='https://packersandmoversltd.co.ke/contact-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">Contact us</span></span></a></li> 	</ul>
+	<div class='mobile-mini-widgets-in-menu'></div>
+</div>
+
+<style id="the7-page-content-style">
+#main {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+@media screen and (max-width: 778px) {
+  #main {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+</style><div id="main-slideshow">
+			<!-- START slider1 REVOLUTION SLIDER 6.2.23 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="background:#E9E9E9;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;max-width:;">
+				<rs-module id="rev_slider_1_1" style="" data-version="6.2.23">
+					<rs-slides>
+						<rs-slide data-key="rs-1" data-title="Slide" data-thumb="//packersandmoversltd.co.ke/wp-content/uploads/2020/07/Packers-and-Movers-Kenya-Limited-The-Relocation-wizards-Kenya-best-movers-within-Nairobi-Africa-copy-100x50.jpg" data-anim="ei:d;eo:d;s:300;r:0;t:random;sl:7;">
+							<img src="//packersandmoversltd.co.ke/wp-content/uploads/2020/07/Packers-and-Movers-Kenya-Limited-The-Relocation-wizards-Kenya-best-movers-within-Nairobi-Africa-copy.jpg" title="Packers-and-Movers-Kenya-Limited-The-Relocation-wizards-Kenya-best-movers-within-Nairobi-Africa-copy" width="1920" height="680" data-bg="p:center top;" data-parallax="off" class="rev-slidebg" data-no-retina>
+<!--
+							--><a
+								id="slider-1-slide-1-layer-3" 
+								class="rs-layer rev-btn"
+								href="https://packersandmoversltd.co.ke/quotation/" target="_self" rel="nofollow"
+								data-type="button"
+								data-color="#ffffff"
+								data-xy="x:r;y:b;"
+								data-text="w:normal;l:55;fw:500;"
+								data-dim="minh:0px;"
+								data-rsp_bd="off"
+								data-padding="r:50;l:50;"
+								data-border="bor:3px,3px,3px,3px;"
+								data-frame_999="o:0;st:w;"
+								data-frame_hover="c:#fff;bgc:#fa001c;bor:3px,3px,3px,3px;sp:100;e:power1.inOut;bri:120%;"
+								style="z-index:7;background-color:#fa001c;font-family:Roboto;"
+							>Get a Quote 
+							</a><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-2" data-title="Slide" data-thumb="//packersandmoversltd.co.ke/wp-content/uploads/revslider/slider1/Packers-and-Movers-Kenya-Limited-The-Relocation-wizards-Kenya-Movers-and-best-relocators-1-100x50.jpg" data-anim="ei:d;eo:d;s:300;r:0;t:random;sl:7;">
+							<img src="//packersandmoversltd.co.ke/wp-content/uploads/revslider/slider1/Packers-and-Movers-Kenya-Limited-The-Relocation-wizards-Kenya-Movers-and-best-relocators-1.jpg" title="Packers-and-Movers-Kenya-Limited-The-Relocation-wizards-Kenya-Movers-and-best-relocators-1.jpg" width="1920" height="740" data-bg="p:center top;" data-parallax="off" class="rev-slidebg" data-no-retina>
+<!--
+							--><a
+								id="slider-1-slide-2-layer-2" 
+								class="rs-layer rev-btn"
+								href="https://packersandmoversltd.co.ke/quotation/" target="_self" rel="nofollow"
+								data-type="button"
+								data-color="#ffffff"
+								data-xy="x:r;y:b;"
+								data-text="w:normal;l:50;fw:500;"
+								data-dim="w:172px;minh:0px;"
+								data-rsp_bd="off"
+								data-padding="r:20;l:20;"
+								data-frame_999="o:0;st:w;"
+								data-frame_hover="c:#000;bgc:#fff;bor:0px,0px,0px,0px;sp:200;e:power1.inOut;"
+								style="z-index:9;background-color:#fa001c;font-family:Roboto;"
+							>Get a Quote 
+							</a><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-3" data-title="Slide" data-thumb="//packersandmoversltd.co.ke/wp-content/uploads/revslider/slider1/Packers-and-Movers-Kenya-cross-border-relocation-100x50.jpg" data-anim="ei:d;eo:d;s:300;r:0;t:random;sl:7;">
+							<img src="//packersandmoversltd.co.ke/wp-content/uploads/revslider/slider1/Packers-and-Movers-Kenya-cross-border-relocation.jpg" title="Packers-and-Movers-Kenya-cross-border-relocation.jpg" width="1920" height="740" data-bg="p:center top;" data-parallax="off" class="rev-slidebg" data-no-retina>
+<!--
+							--><a
+								id="slider-1-slide-3-layer-3" 
+								class="rs-layer rev-btn"
+								href="https://packersandmoversltd.co.ke/quotation/" target="_self" rel="nofollow"
+								data-type="button"
+								data-color="#ffffff"
+								data-xy="x:r;y:b;"
+								data-text="w:normal;l:55;fw:500;"
+								data-dim="minh:0px;"
+								data-rsp_bd="off"
+								data-padding="r:50;l:50;"
+								data-border="bor:3px,3px,3px,3px;"
+								data-frame_999="o:0;st:w;"
+								data-frame_hover="c:#fff;bgc:#fa001c;bor:3px,3px,3px,3px;sp:100;e:power1.inOut;bri:120%;"
+								style="z-index:7;background-color:#fa001c;font-family:Roboto;"
+							>Get a Quote 
+							</a><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-4" data-title="Slide" data-thumb="//packersandmoversltd.co.ke/wp-content/uploads/revslider/slider1/Packers-and-Movers-Kenya-Relocation-copy-1-100x50.jpg" data-anim="ei:d;eo:d;s:300;r:0;t:random;sl:7;">
+							<img src="//packersandmoversltd.co.ke/wp-content/uploads/revslider/slider1/Packers-and-Movers-Kenya-Relocation-copy-1.jpg" title="Packers-and-Movers-Kenya-Relocation-copy-1.jpg" width="1920" height="740" data-bg="p:center top;" data-parallax="off" class="rev-slidebg" data-no-retina>
+<!--
+							--><a
+								id="slider-1-slide-4-layer-3" 
+								class="rs-layer rev-btn"
+								href="https://packersandmoversltd.co.ke/quotation/" target="_self" rel="nofollow"
+								data-type="button"
+								data-color="#ffffff"
+								data-xy="x:r;y:b;"
+								data-text="w:normal;l:55;fw:500;"
+								data-dim="minh:0px;"
+								data-rsp_bd="off"
+								data-padding="r:50;l:50;"
+								data-border="bor:3px,3px,3px,3px;"
+								data-frame_999="o:0;st:w;"
+								data-frame_hover="c:#fff;bgc:#fa001c;bor:3px,3px,3px,3px;sp:100;e:power1.inOut;bri:120%;"
+								style="z-index:7;background-color:#fa001c;font-family:Roboto;"
+							>Get a Quote 
+							</a><!--
+-->						</rs-slide>
+						<rs-slide data-key="rs-5" data-title="Slide" data-thumb="//packersandmoversltd.co.ke/wp-content/uploads/revslider/slider1/Packers-and-Movers-Kenya-international-100x50.jpg" data-anim="ei:d;eo:d;s:300;r:0;t:random;sl:7;">
+							<img src="//packersandmoversltd.co.ke/wp-content/uploads/revslider/slider1/Packers-and-Movers-Kenya-international.jpg" title="Packers-and-Movers-Kenya-international.jpg" width="1920" height="740" data-bg="p:center top;" data-parallax="off" class="rev-slidebg" data-no-retina>
+<!--
+							--><a
+								id="slider-1-slide-5-layer-3" 
+								class="rs-layer rev-btn"
+								href="http://localhosthttps://packersandmoversltd.co.ke/quotation/26july/quotation/" target="_self" rel="nofollow"
+								data-type="button"
+								data-color="#ffffff"
+								data-xy="x:r;y:b;"
+								data-text="w:normal;l:55;fw:500;"
+								data-dim="minh:0px;"
+								data-rsp_bd="off"
+								data-padding="r:50;l:50;"
+								data-border="bor:3px,3px,3px,3px;"
+								data-frame_999="o:0;st:w;"
+								data-frame_hover="c:#fff;bgc:#fa001c;bor:3px,3px,3px,3px;sp:100;e:power1.inOut;bri:120%;"
+								style="z-index:7;background-color:#fa001c;font-family:Roboto;"
+							>Get a Quote 
+							</a><!--
+-->						</rs-slide>
+					</rs-slides>
+				</rs-module>
+				<script type="text/javascript">
+					setREVStartSize({c: 'rev_slider_1_1',rl:[1240,1024,778,480],el:[450],gw:[960],gh:[450],type:'standard',justify:'',layout:'fullwidth',mh:"0"});
+					var	revapi1,
+						tpj;
+					function revinit_revslider11() {
+					jQuery(function() {
+						tpj = jQuery;
+						revapi1 = tpj("#rev_slider_1_1");
+						tpj.noConflict();
+						if(revapi1==undefined || revapi1.revolution == undefined){
+							revslider_showDoubleJqueryError("rev_slider_1_1");
+						}else{
+							revapi1.revolution({
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:960,
+								gridheight:450,
+								spinner:"spinner2",
+								perspective:600,
+								perspectiveType:"local",
+								editorheight:"450,768,960,720",
+								responsiveLevels:"1240,1024,778,480",
+								progressBar: {
+									color:"rgba(0,0,0,0.15)",
+									vertical:"top",
+									size:5,
+									x:0,
+									y:0
+								},
+								navigation: {
+									mouseScrollNavigation:false,
+									onHoverStop:false,
+									touch: {
+										touchenabled:true,
+										swipe_threshold:0
+									},
+									arrows: {
+										enable:true,
+										style:"hesperiden",
+										hide_onleave:true,
+										left: {
+											container:"layergrid"
+										},
+										right: {
+											container:"layergrid"
+										}
+									}
+								},
+								parallax: {
+									levels:[5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
+									type:"mouse"
+								},
+								fallbacks: {
+									allowHTML5AutoPlayOnAndroid:true
+								},
+							});
+						}
+						
+					});
+					} // End of RevInitScript
+				var once_revslider11 = false;
+				if (document.readyState === "loading") {document.addEventListener('readystatechange',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider11 ) { once_revslider11 = true; revinit_revslider11();}});} else {once_revslider11 = true; revinit_revslider11();}
+				</script>
+				<script>
+					var htmlDivCss = ' #rev_slider_1_1_wrapper rs-loader.spinner2{ background-color: #FFFFFF !important; } ';
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				</script>
+				<script>
+					var htmlDivCss = unescape("%23rev_slider_1_1_wrapper%20.hesperiden.tparrows%20%7B%0A%09cursor%3Apointer%3B%0A%09background%3Argba%280%2C0%2C0%2C0.5%29%3B%0A%09width%3A40px%3B%0A%09height%3A40px%3B%0A%09position%3Aabsolute%3B%0A%09display%3Ablock%3B%0A%09z-index%3A1000%3B%0A%20%20%20%20border-radius%3A%2050%25%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.hesperiden.tparrows%3Ahover%20%7B%0A%09background%3A%23000000%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.hesperiden.tparrows%3Abefore%20%7B%0A%09font-family%3A%20%27revicons%27%3B%0A%09font-size%3A20px%3B%0A%09color%3A%23ffffff%3B%0A%09display%3Ablock%3B%0A%09line-height%3A%2040px%3B%0A%09text-align%3A%20center%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.hesperiden.tparrows.tp-leftarrow%3Abefore%20%7B%0A%09content%3A%20%27%5Ce82c%27%3B%0A%20%20%20%20margin-left%3A-3px%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.hesperiden.tparrows.tp-rightarrow%3Abefore%20%7B%0A%09content%3A%20%27%5Ce82d%27%3B%0A%20%20%20%20margin-right%3A-3px%3B%0A%7D%0A");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				</script>
+				<script>
+					var htmlDivCss = unescape("%0A%0A%0A%0A%0A");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				</script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+</div>
+
+<div id="main" class="sidebar-none sidebar-divider-off">
+
+	
+	<div class="main-gradient"></div>
+	<div class="wf-wrap">
+	<div class="wf-container-main">
+
+	
+
+
+	<div id="content" class="content" role="main">
+
+		<div class="vc_row wpb_row vc_row-fluid vc_custom_1591553867646 vc_row-o-equal-height vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h1 style="text-align: center;">Welcome to Packers and movers (K) Ltd</h1>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><span lang="EN-GB" style="font-family: 'Tahoma',sans-serif;">Packers and movers Kenya Ltd is one of the top moving companies in Kenya. Relocation can be a challenging task which involves planning, execution of actual move to destination settling down. With Packers and Movers Ltd. Your relocation is with the right people.  The Company has a global vision to provide a one stop shop for shifting, relocation and storage solutions.  The company has evolved from a humble on solid values of honesty, reliability, proficiency and customer satisfactory services.<a href="https://packersandmoversltd.co.ke/about-us/" target="_blank" rel="noopener noreferrer">Read more</a><br />
+</span></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1493730770993"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;">Domestic House Shifting</h3>
+<p style="text-align: center;">Whether you are moving within the apartment, estate, city or whether you are shifting across cities, we will make your…</p>
+
+		</div>
+	</div>
+<style type="text/css" data-type="the7_shortcodes-inline-css">.shortcode-single-image-wrap.shortcode-single-image-20f3a2ee1d06b81922c9200a33c12d0d.enable-bg-rollover .rollover i,
+.shortcode-single-image-wrap.shortcode-single-image-20f3a2ee1d06b81922c9200a33c12d0d.enable-bg-rollover .rollover-video i {
+  background: ;
+  background: -webkit-linear-gradient();
+  background: linear-gradient();
+}
+.shortcode-single-image-wrap.shortcode-single-image-20f3a2ee1d06b81922c9200a33c12d0d .rollover-icon {
+  font-size: 32px;
+  color: #ffffff;
+  min-width: 44px;
+  min-height: 44px;
+  line-height: 44px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 0px;
+}
+.dt-icon-bg-on.shortcode-single-image-wrap.shortcode-single-image-20f3a2ee1d06b81922c9200a33c12d0d .rollover-icon {
+  background: rgba(255,255,255,0.3);
+  box-shadow: none;
+}
+</style><div class="shortcode-single-image-wrap shortcode-single-image-20f3a2ee1d06b81922c9200a33c12d0d alignnone flipInX animate-element  vc_custom_1595719999116 enable-bg-rollover dt-icon-bg-off" ><div class="shortcode-single-image"><div class="fancy-media-wrap  layzr-bg" style=""><img class="preload-me lazy-load" src="data:image/svg+xml,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%20350%20250&#39;%2F%3E" data-src="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Domestic-House-Shifting.jpg" data-srcset="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Domestic-House-Shifting.jpg 350w" width="350" height="250"  data-dt-location="https://packersandmoversltd.co.ke/packers-and-movers-best-movers-in-kenya/attachment/domestic-house-shifting-2/" style="" alt="" /></div></div></div><style type="text/css" data-type="the7_shortcodes-inline-css">#default-btn-3b840d778aad81b962e5089f95e237cb.ico-right-side > i {
+  margin-right: 0px;
+  margin-left: 8px;
+}
+#default-btn-3b840d778aad81b962e5089f95e237cb > i {
+  margin-right: 8px;
+}
+#default-btn-3b840d778aad81b962e5089f95e237cb * {
+  vertical-align: middle;
+}
+</style><div class="btn-align-center"><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/" class="default-btn-shortcode dt-btn dt-btn-l link-hover-off anchor-link " id="default-btn-3b840d778aad81b962e5089f95e237cb" style="width:349px;" title="Domestic House Shifting"><i class="icomoon-the7-font-the7-arrow-29"></i><span>Read more</span></a></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1493730766899"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;">Office Relocations</h3>
+<p style="text-align: center;">Office relocations can be sophisticated, complicated or even inconveniencing to the stakeholders of the company planning to move office because…</p>
+
+		</div>
+	</div>
+<style type="text/css" data-type="the7_shortcodes-inline-css">.shortcode-single-image-wrap.shortcode-single-image-6e3d1f7fced931664f08ae4c29c09e6b.enable-bg-rollover .rollover i,
+.shortcode-single-image-wrap.shortcode-single-image-6e3d1f7fced931664f08ae4c29c09e6b.enable-bg-rollover .rollover-video i {
+  background: ;
+  background: -webkit-linear-gradient();
+  background: linear-gradient();
+}
+.shortcode-single-image-wrap.shortcode-single-image-6e3d1f7fced931664f08ae4c29c09e6b .rollover-icon {
+  font-size: 32px;
+  color: #ffffff;
+  min-width: 44px;
+  min-height: 44px;
+  line-height: 44px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 0px;
+}
+.dt-icon-bg-on.shortcode-single-image-wrap.shortcode-single-image-6e3d1f7fced931664f08ae4c29c09e6b .rollover-icon {
+  background: rgba(255,255,255,0.3);
+  box-shadow: none;
+}
+</style><div class="shortcode-single-image-wrap shortcode-single-image-6e3d1f7fced931664f08ae4c29c09e6b alignnone flipInX animate-element  vc_custom_1595720020300 enable-bg-rollover dt-icon-bg-off" ><div class="shortcode-single-image"><div class="fancy-media-wrap  layzr-bg" style=""><img class="preload-me lazy-load" src="data:image/svg+xml,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%20350%20250&#39;%2F%3E" data-src="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Office-relocations_packers-and-movers-kenya-ltd-2.jpg" data-srcset="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Office-relocations_packers-and-movers-kenya-ltd-2.jpg 350w" width="350" height="250"  data-dt-location="https://packersandmoversltd.co.ke/packers-and-movers-best-movers-in-kenya/attachment/office-relocations_packers-and-movers-kenya-ltd-2/" style="" alt="" /></div></div></div><style type="text/css" data-type="the7_shortcodes-inline-css">#default-btn-50f5a4149de534d7c5e7240c58059fa7.ico-right-side > i {
+  margin-right: 0px;
+  margin-left: 8px;
+}
+#default-btn-50f5a4149de534d7c5e7240c58059fa7 > i {
+  margin-right: 8px;
+}
+#default-btn-50f5a4149de534d7c5e7240c58059fa7 * {
+  vertical-align: middle;
+}
+</style><div class="btn-align-center"><a href="https://packersandmoversltd.co.ke/office-relocations/" class="default-btn-shortcode dt-btn dt-btn-l link-hover-off anchor-link " id="default-btn-50f5a4149de534d7c5e7240c58059fa7" style="width:349px;" title="Office Relocations"><i class="icomoon-the7-font-the7-arrow-29"></i><span>Read more</span></a></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1493730776714"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;">Settling in Services</h3>
+<p style="text-align: center;">For those who are moving to a new country, we take the load of border or airport clearance, documentation, and…</p>
+
+		</div>
+	</div>
+<style type="text/css" data-type="the7_shortcodes-inline-css">.shortcode-single-image-wrap.shortcode-single-image-c14e0349a019679a71731e1208e97966.enable-bg-rollover .rollover i,
+.shortcode-single-image-wrap.shortcode-single-image-c14e0349a019679a71731e1208e97966.enable-bg-rollover .rollover-video i {
+  background: ;
+  background: -webkit-linear-gradient();
+  background: linear-gradient();
+}
+.shortcode-single-image-wrap.shortcode-single-image-c14e0349a019679a71731e1208e97966 .rollover-icon {
+  font-size: 32px;
+  color: #ffffff;
+  min-width: 44px;
+  min-height: 44px;
+  line-height: 44px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 0px;
+}
+.dt-icon-bg-on.shortcode-single-image-wrap.shortcode-single-image-c14e0349a019679a71731e1208e97966 .rollover-icon {
+  background: rgba(255,255,255,0.3);
+  box-shadow: none;
+}
+</style><div class="shortcode-single-image-wrap shortcode-single-image-c14e0349a019679a71731e1208e97966 alignnone flipInX animate-element  vc_custom_1595720041426 enable-bg-rollover dt-icon-bg-off" ><div class="shortcode-single-image"><div class="fancy-media-wrap  layzr-bg" style=""><img class="preload-me lazy-load" src="data:image/svg+xml,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%20350%20250&#39;%2F%3E" data-src="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Settling-in-Services_packers-and-movers-Kenya.jpg" data-srcset="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Settling-in-Services_packers-and-movers-Kenya.jpg 350w" width="350" height="250"  data-dt-location="https://packersandmoversltd.co.ke/packers-and-movers-best-movers-in-kenya/attachment/settling-in-services_packers-and-movers-kenya/" style="" alt="" /></div></div></div><style type="text/css" data-type="the7_shortcodes-inline-css">#default-btn-31050187ee6be5d85fcd4a920306172f.ico-right-side > i {
+  margin-right: 0px;
+  margin-left: 8px;
+}
+#default-btn-31050187ee6be5d85fcd4a920306172f > i {
+  margin-right: 8px;
+}
+#default-btn-31050187ee6be5d85fcd4a920306172f * {
+  vertical-align: middle;
+}
+</style><div class="btn-align-center"><a href="https://packersandmoversltd.co.ke/settling-in-services-2/" class="default-btn-shortcode dt-btn dt-btn-l link-hover-off anchor-link " id="default-btn-31050187ee6be5d85fcd4a920306172f" style="width:349px;" title="Settling in Services"><i class="icomoon-the7-font-the7-arrow-29"></i><span>Read more</span></a></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_custom_1493832879938 vc_row-o-equal-height vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1493730770993"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;">Cross border moves</h3>
+<p style="text-align: center;">Packers and Movers Ltd understands that international moving requires more than financial acumen and logistics expertise</p>
+
+		</div>
+	</div>
+<style type="text/css" data-type="the7_shortcodes-inline-css">.shortcode-single-image-wrap.shortcode-single-image-88d27e314fcf39007704134ecfd4f85d.enable-bg-rollover .rollover i,
+.shortcode-single-image-wrap.shortcode-single-image-88d27e314fcf39007704134ecfd4f85d.enable-bg-rollover .rollover-video i {
+  background: ;
+  background: -webkit-linear-gradient();
+  background: linear-gradient();
+}
+.shortcode-single-image-wrap.shortcode-single-image-88d27e314fcf39007704134ecfd4f85d .rollover-icon {
+  font-size: 32px;
+  color: #ffffff;
+  min-width: 44px;
+  min-height: 44px;
+  line-height: 44px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 0px;
+}
+.dt-icon-bg-on.shortcode-single-image-wrap.shortcode-single-image-88d27e314fcf39007704134ecfd4f85d .rollover-icon {
+  background: rgba(255,255,255,0.3);
+  box-shadow: none;
+}
+</style><div class="shortcode-single-image-wrap shortcode-single-image-88d27e314fcf39007704134ecfd4f85d alignnone flipInX animate-element  vc_custom_1595720448037 enable-bg-rollover dt-icon-bg-off" ><div class="shortcode-single-image"><div class="fancy-media-wrap  layzr-bg" style=""><img class="preload-me lazy-load" src="data:image/svg+xml,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%20350%20250&#39;%2F%3E" data-src="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Across-border-moves_packers-and-movers-ltd.jpg" data-srcset="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Across-border-moves_packers-and-movers-ltd.jpg 350w" width="350" height="250"  data-dt-location="https://packersandmoversltd.co.ke/packers-and-movers-best-movers-in-kenya/attachment/across-border-moves_packers-and-movers-ltd/" style="" alt="" /></div></div></div><style type="text/css" data-type="the7_shortcodes-inline-css">#default-btn-95699328a88560ecfbff1a3936337484.ico-right-side > i {
+  margin-right: 0px;
+  margin-left: 8px;
+}
+#default-btn-95699328a88560ecfbff1a3936337484 > i {
+  margin-right: 8px;
+}
+#default-btn-95699328a88560ecfbff1a3936337484 * {
+  vertical-align: middle;
+}
+</style><div class="btn-align-center"><a href="https://packersandmoversltd.co.ke/cross-border-moves/" class="default-btn-shortcode dt-btn dt-btn-l link-hover-off anchor-link " id="default-btn-95699328a88560ecfbff1a3936337484" style="width:349px;" title="Cross Border Moves"><i class="icomoon-the7-font-the7-arrow-29"></i><span>Read more</span></a></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1493730766899"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;">International Relocation</h3>
+<p style="text-align: center;">Are you planning to relocate out of the country?<br />
+Relocating abroad is a major event for<br />
+every individual.</p>
+
+		</div>
+	</div>
+<style type="text/css" data-type="the7_shortcodes-inline-css">.shortcode-single-image-wrap.shortcode-single-image-22c7a42825599d7f84f0b7b2f434e88f.enable-bg-rollover .rollover i,
+.shortcode-single-image-wrap.shortcode-single-image-22c7a42825599d7f84f0b7b2f434e88f.enable-bg-rollover .rollover-video i {
+  background: ;
+  background: -webkit-linear-gradient();
+  background: linear-gradient();
+}
+.shortcode-single-image-wrap.shortcode-single-image-22c7a42825599d7f84f0b7b2f434e88f .rollover-icon {
+  font-size: 32px;
+  color: #ffffff;
+  min-width: 44px;
+  min-height: 44px;
+  line-height: 44px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 0px;
+}
+.dt-icon-bg-on.shortcode-single-image-wrap.shortcode-single-image-22c7a42825599d7f84f0b7b2f434e88f .rollover-icon {
+  background: rgba(255,255,255,0.3);
+  box-shadow: none;
+}
+</style><div class="shortcode-single-image-wrap shortcode-single-image-22c7a42825599d7f84f0b7b2f434e88f alignnone flipInX animate-element  vc_custom_1595720466675 enable-bg-rollover dt-icon-bg-off" ><div class="shortcode-single-image"><div class="fancy-media-wrap  layzr-bg" style=""><img class="preload-me lazy-load" src="data:image/svg+xml,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%20350%20250&#39;%2F%3E" data-src="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/International-relocation-3.jpg" data-srcset="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/International-relocation-3.jpg 350w" width="350" height="250"  data-dt-location="https://packersandmoversltd.co.ke/packers-and-movers-best-movers-in-kenya/attachment/international-relocation-3/" style="" alt="" /></div></div></div><style type="text/css" data-type="the7_shortcodes-inline-css">#default-btn-d120920a1f7e81220bdcd3cabddfd529.ico-right-side > i {
+  margin-right: 0px;
+  margin-left: 8px;
+}
+#default-btn-d120920a1f7e81220bdcd3cabddfd529 > i {
+  margin-right: 8px;
+}
+#default-btn-d120920a1f7e81220bdcd3cabddfd529 * {
+  vertical-align: middle;
+}
+</style><div class="btn-align-center"><a href="https://packersandmoversltd.co.ke/international-relocation/" class="default-btn-shortcode dt-btn dt-btn-l link-hover-off anchor-link " id="default-btn-d120920a1f7e81220bdcd3cabddfd529" style="width:349px;" title="International relocation"><i class="icomoon-the7-font-the7-arrow-29"></i><span>Read more</span></a></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1493730776714"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;">Storage</h3>
+<p style="text-align: center;">For those who are moving to a new country, we take the load of border or airport clearance, documentation, and…</p>
+
+		</div>
+	</div>
+<style type="text/css" data-type="the7_shortcodes-inline-css">.shortcode-single-image-wrap.shortcode-single-image-0b3ecb4f9b42a9510e04fc3ce359cbb5.enable-bg-rollover .rollover i,
+.shortcode-single-image-wrap.shortcode-single-image-0b3ecb4f9b42a9510e04fc3ce359cbb5.enable-bg-rollover .rollover-video i {
+  background: ;
+  background: -webkit-linear-gradient();
+  background: linear-gradient();
+}
+.shortcode-single-image-wrap.shortcode-single-image-0b3ecb4f9b42a9510e04fc3ce359cbb5 .rollover-icon {
+  font-size: 32px;
+  color: #ffffff;
+  min-width: 44px;
+  min-height: 44px;
+  line-height: 44px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 0px;
+}
+.dt-icon-bg-on.shortcode-single-image-wrap.shortcode-single-image-0b3ecb4f9b42a9510e04fc3ce359cbb5 .rollover-icon {
+  background: rgba(255,255,255,0.3);
+  box-shadow: none;
+}
+</style><div class="shortcode-single-image-wrap shortcode-single-image-0b3ecb4f9b42a9510e04fc3ce359cbb5 alignnone flipInX animate-element  vc_custom_1595720484440 enable-bg-rollover dt-icon-bg-off" ><div class="shortcode-single-image"><div class="fancy-media-wrap  layzr-bg" style=""><img class="preload-me lazy-load" src="data:image/svg+xml,%3Csvg%20xmlns%3D&#39;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#39;%20viewBox%3D&#39;0%200%20350%20250&#39;%2F%3E" data-src="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/storage_packers-and-movers-Kenya-ltd.jpg" data-srcset="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/storage_packers-and-movers-Kenya-ltd.jpg 350w" width="350" height="250"  data-dt-location="https://packersandmoversltd.co.ke/packers-and-movers-best-movers-in-kenya/attachment/storage_packers-and-movers-kenya-ltd/" style="" alt="" /></div></div></div><style type="text/css" data-type="the7_shortcodes-inline-css">#default-btn-5b734ee7193994eea451b27ffd00ced4.ico-right-side > i {
+  margin-right: 0px;
+  margin-left: 8px;
+}
+#default-btn-5b734ee7193994eea451b27ffd00ced4 > i {
+  margin-right: 8px;
+}
+#default-btn-5b734ee7193994eea451b27ffd00ced4 * {
+  vertical-align: middle;
+}
+</style><div class="btn-align-center"><a href="https://packersandmoversltd.co.ke/storage/" class="default-btn-shortcode dt-btn dt-btn-l link-hover-off anchor-link " id="default-btn-5b734ee7193994eea451b27ffd00ced4" style="width:349px;" title="Storage"><i class="icomoon-the7-font-the7-arrow-29"></i><span>Read more</span></a></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;"><span style="color: #ff0000;"><em>&#8230;Relocation wizards&#8230;</em></span></h3>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element  vc_custom_1596099949760" >
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;"><span style="color: #ff0000;">Testimonials</span></h3>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_custom_1596099924373"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><style type="text/css" data-type="the7_shortcodes-inline-css">.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a {
+  width: 36px;
+  height: 36px;
+  border-radius: 500px;
+}
+.dt-arrow-border-on.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a:not(:hover):before {
+  border-width: 0px;
+}
+.dt-arrow-hover-border-on.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a:hover:after {
+  border-width: 0px;
+}
+.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a.owl-prev {
+  top: 50%;
+  transform: translateY(calc(-50% + 0px));
+  left: -43px;
+}
+@media all and (-ms-high-contrast: none) {
+  .carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a.owl-prev {
+    transform: translateY(-50%);
+    margin-top: 0px;
+  }
+}
+.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a.owl-prev i {
+  padding: 0px 0px 0px 0px;
+}
+.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a.owl-next {
+  top: 50%;
+  transform: translateY(calc(-50% + 0px));
+  right: -43px;
+}
+@media all and (-ms-high-contrast: none) {
+  .carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a.owl-next {
+    transform: translateY(-50%);
+    margin-top: 0px;
+  }
+}
+.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a.owl-next i {
+  padding: 0px 0px 0px 0px;
+}
+.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav i {
+  font-size: 18px;
+}
+.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a:not(:hover) i,
+.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a:not(:hover) i:before {
+  color: #ffffff;
+  background: none;
+}
+.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a:hover i,
+.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-nav a:hover i:before {
+  color: rgba(255,255,255,0.75);
+  background: none;
+}
+.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-dots {
+  top: calc(100% + 0px);
+  left: 50%;
+  transform: translateX(calc(-50% + 0px));
+}
+@media all and (-ms-high-contrast: none) {
+  .carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-dots {
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+}
+.carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 .owl-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+}
+@media screen and (max-width: 778px) {
+  .carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5.hide-arrows .owl-nav a {
+    display: none;
+  }
+}
+@media screen and (max-width: 778px) {
+  .carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5.reposition-arrows .owl-nav .owl-prev {
+    top: 50%;
+    transform: translateY(calc(-50% + 0px));
+    left: 10px;
+  }
+  .carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5.reposition-arrows .owl-nav .owl-next {
+    top: 50%;
+    transform: translateY(calc(-50% + 0px));
+    right: 10px;
+  }
+}
+@media screen and (max-width: 778px) and all and (-ms-high-contrast: none) {
+  .carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5.reposition-arrows .owl-nav .owl-prev {
+    transform: translateY(-50%);
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 778px) and all and (-ms-high-contrast: none) {
+  .carousel-shortcode.carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5.reposition-arrows .owl-nav .owl-next {
+    transform: translateY(-50%);
+    margin-top: 0px;
+  }
+}
+</style><div class="owl-carousel carousel-shortcode dt-owl-carousel-call carousel-shortcode-id-b3e03bb10824a945ceecd04b07e347b5 bullets-small-dot-stroke reposition-arrows arrows-bg-on dt-arrow-border-on dt-arrow-hover-border-on disable-arrows-hover-bg arrows-hover-bg-on  " data-scroll-mode="1" data-col-num="1" data-wide-col-num="1" data-laptop-col="1" data-h-tablet-columns-num="1" data-v-tablet-columns-num="1" data-phone-columns-num="1" data-auto-height="true" data-col-gap="30" data-stage-padding="0" data-speed="600" data-autoplay="false" data-autoplay_speed="6000" data-arrows="false" data-bullet="true" data-next-icon="icon-ar-017-r" data-prev-icon="icon-ar-017-l"><style type="text/css" data-type="the7_shortcodes-inline-css">.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 32px;
+  border-radius: 200px;
+  margin: 0px 0px 0px 0px;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon .icon-inner {
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 200px;
+}
+@media all and (-ms-high-contrast: none) {
+  .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon .icon-inner {
+    height: 60px;
+  }
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon .dt-hover-icon {
+  line-height: 60px;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon:before,
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon:after,
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon .icon-inner:before,
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon .icon-inner:after {
+  min-width: 100%;
+  min-height: 100%;
+  padding: inherit;
+  border-radius: inherit;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-border-on:before {
+  border-width: 2px;
+  border-style: solid;
+  border-color: ;
+}
+.dt-icon-border-dashed.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-border-on:before {
+  border-style: dashed;
+}
+.dt-icon-border-dotted.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-border-on:before {
+  border-style: dotted;
+}
+.dt-icon-border-double.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-border-on:before {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-border-dashed.dt-icon-border-on:before {
+  border-style: dashed;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-border-dotted.dt-icon-border-on:before {
+  border-style: dotted;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-border-double.dt-icon-border-on:before {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-border-on:after {
+  border-width: 2px;
+  border-style: solid;
+  border-color: ;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-border-dashed.dt-icon-hover-border-on:after {
+  border-style: dashed;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-border-dotted.dt-icon-hover-border-on:after {
+  border-style: dotted;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-border-double.dt-icon-hover-border-on:after {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-on:hover {
+  font-size: 32px;
+}
+#page .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-on:hover .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-on:hover .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-on:hover .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-on:hover .soc-icon {
+  color: #fff;
+  background: none;
+}
+#page .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-on:not(:hover) .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-on:not(:hover) .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-on:not(:hover) .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-on:not(:hover) .soc-icon,
+#page .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-off .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-off .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-off .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .text-icon.dt-icon-hover-off .soc-icon {
+  color: #ffffff;
+  background: none;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9.layout-1 {
+  grid-template-columns: 60px minmax(0,1fr);
+  grid-column-gap: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9.layout-2 {
+  grid-template-columns: minmax(0,1fr) 60px;
+  grid-column-gap: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9.layout-2 .text-icon {
+  margin-left: 0;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9.layout-3 {
+  grid-template-columns: 60px minmax(0,1fr);
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9.layout-3 .dt-text-title {
+  margin-left: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .dt-text-title {
+  margin-bottom: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .dt-text-desc {
+  margin-bottom: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 .default-btn-shortcode * {
+  vertical-align: middle;
+}
+</style><div class="icon-with-text-shortcode  icon-text-id-7ebadad210b40b7ab8c0ea7df4f0c2c9 layout-5  " ><span   class="text-icon dt-icon-bg-on dt-icon-hover-off" ><span class="icon-inner"><i class="dt-regular-icon soc-icon icomoon-the7-font-the7-login-03"></i><i class="dt-hover-icon soc-icon icomoon-the7-font-the7-login-03"></i></span></span><h4 class="dt-text-title"  >Rachael O.</h4><div class="dt-text-desc">Packers and movers are my movers of choice.I am always happy and satisfied with the excellent service.Friends and colleagues i have referred,always give an excellent report.Well done for the good job,I am a proud customer always.</div></div><style type="text/css" data-type="the7_shortcodes-inline-css">.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 32px;
+  border-radius: 200px;
+  margin: 0px 0px 0px 0px;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon .icon-inner {
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 200px;
+}
+@media all and (-ms-high-contrast: none) {
+  .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon .icon-inner {
+    height: 60px;
+  }
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon .dt-hover-icon {
+  line-height: 60px;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon:before,
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon:after,
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon .icon-inner:before,
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon .icon-inner:after {
+  min-width: 100%;
+  min-height: 100%;
+  padding: inherit;
+  border-radius: inherit;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-border-on:before {
+  border-width: 2px;
+  border-style: solid;
+  border-color: ;
+}
+.dt-icon-border-dashed.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-border-on:before {
+  border-style: dashed;
+}
+.dt-icon-border-dotted.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-border-on:before {
+  border-style: dotted;
+}
+.dt-icon-border-double.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-border-on:before {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-border-dashed.dt-icon-border-on:before {
+  border-style: dashed;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-border-dotted.dt-icon-border-on:before {
+  border-style: dotted;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-border-double.dt-icon-border-on:before {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-border-on:after {
+  border-width: 2px;
+  border-style: solid;
+  border-color: ;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-border-dashed.dt-icon-hover-border-on:after {
+  border-style: dashed;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-border-dotted.dt-icon-hover-border-on:after {
+  border-style: dotted;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-border-double.dt-icon-hover-border-on:after {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-on:hover {
+  font-size: 32px;
+}
+#page .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-on:hover .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-on:hover .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-on:hover .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-on:hover .soc-icon {
+  color: #fff;
+  background: none;
+}
+#page .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-on:not(:hover) .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-on:not(:hover) .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-on:not(:hover) .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-on:not(:hover) .soc-icon,
+#page .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-off .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-off .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-off .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .text-icon.dt-icon-hover-off .soc-icon {
+  color: #ffffff;
+  background: none;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827.layout-1 {
+  grid-template-columns: 60px minmax(0,1fr);
+  grid-column-gap: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827.layout-2 {
+  grid-template-columns: minmax(0,1fr) 60px;
+  grid-column-gap: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827.layout-2 .text-icon {
+  margin-left: 0;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827.layout-3 {
+  grid-template-columns: 60px minmax(0,1fr);
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827.layout-3 .dt-text-title {
+  margin-left: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .dt-text-title {
+  margin-bottom: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .dt-text-desc {
+  margin-bottom: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-1e23983254cd036994fbc03cd0460827 .default-btn-shortcode * {
+  vertical-align: middle;
+}
+</style><div class="icon-with-text-shortcode  icon-text-id-1e23983254cd036994fbc03cd0460827 layout-5  " ><span   class="text-icon dt-icon-bg-on dt-icon-hover-off" ><span class="icon-inner"><i class="dt-regular-icon soc-icon icomoon-the7-font-the7-login-03"></i><i class="dt-hover-icon soc-icon icomoon-the7-font-the7-login-03"></i></span></span><h4 class="dt-text-title"  >Judith M.</h4><div class="dt-text-desc">Everything went well,was so impressed by the team work and all the staff are very friendly.Amazing job well done.</div></div><style type="text/css" data-type="the7_shortcodes-inline-css">.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 32px;
+  border-radius: 200px;
+  margin: 0px 0px 0px 0px;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon .icon-inner {
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 200px;
+}
+@media all and (-ms-high-contrast: none) {
+  .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon .icon-inner {
+    height: 60px;
+  }
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon .dt-hover-icon {
+  line-height: 60px;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon:before,
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon:after,
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon .icon-inner:before,
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon .icon-inner:after {
+  min-width: 100%;
+  min-height: 100%;
+  padding: inherit;
+  border-radius: inherit;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-border-on:before {
+  border-width: 2px;
+  border-style: solid;
+  border-color: ;
+}
+.dt-icon-border-dashed.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-border-on:before {
+  border-style: dashed;
+}
+.dt-icon-border-dotted.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-border-on:before {
+  border-style: dotted;
+}
+.dt-icon-border-double.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-border-on:before {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-border-dashed.dt-icon-border-on:before {
+  border-style: dashed;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-border-dotted.dt-icon-border-on:before {
+  border-style: dotted;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-border-double.dt-icon-border-on:before {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-border-on:after {
+  border-width: 2px;
+  border-style: solid;
+  border-color: ;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-border-dashed.dt-icon-hover-border-on:after {
+  border-style: dashed;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-border-dotted.dt-icon-hover-border-on:after {
+  border-style: dotted;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-border-double.dt-icon-hover-border-on:after {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-on:hover {
+  font-size: 32px;
+}
+#page .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-on:hover .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-on:hover .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-on:hover .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-on:hover .soc-icon {
+  color: #fff;
+  background: none;
+}
+#page .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-on:not(:hover) .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-on:not(:hover) .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-on:not(:hover) .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-on:not(:hover) .soc-icon,
+#page .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-off .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-off .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-off .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .text-icon.dt-icon-hover-off .soc-icon {
+  color: #ffffff;
+  background: none;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e.layout-1 {
+  grid-template-columns: 60px minmax(0,1fr);
+  grid-column-gap: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e.layout-2 {
+  grid-template-columns: minmax(0,1fr) 60px;
+  grid-column-gap: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e.layout-2 .text-icon {
+  margin-left: 0;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e.layout-3 {
+  grid-template-columns: 60px minmax(0,1fr);
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e.layout-3 .dt-text-title {
+  margin-left: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .dt-text-title {
+  margin-bottom: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .dt-text-desc {
+  margin-bottom: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-13329f2416490d84b897679e758fd44e .default-btn-shortcode * {
+  vertical-align: middle;
+}
+</style><div class="icon-with-text-shortcode  icon-text-id-13329f2416490d84b897679e758fd44e layout-5  " ><span   class="text-icon dt-icon-bg-on dt-icon-hover-off" ><span class="icon-inner"><i class="dt-regular-icon soc-icon icomoon-the7-font-the7-login-03"></i><i class="dt-hover-icon soc-icon icomoon-the7-font-the7-login-03"></i></span></span><h4 class="dt-text-title"  >Kathleen A.</h4><div class="dt-text-desc">I had a very great team on site and they did their job very well.They ensured my move was safe and well organized.Every item was as they found.Feeling very proud of Packers and Movers.</div></div><style type="text/css" data-type="the7_shortcodes-inline-css">.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 32px;
+  border-radius: 200px;
+  margin: 0px 0px 0px 0px;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon .icon-inner {
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 200px;
+}
+@media all and (-ms-high-contrast: none) {
+  .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon .icon-inner {
+    height: 60px;
+  }
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon .dt-hover-icon {
+  line-height: 60px;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon:before,
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon:after,
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon .icon-inner:before,
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon .icon-inner:after {
+  min-width: 100%;
+  min-height: 100%;
+  padding: inherit;
+  border-radius: inherit;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-border-on:before {
+  border-width: 2px;
+  border-style: solid;
+  border-color: ;
+}
+.dt-icon-border-dashed.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-border-on:before {
+  border-style: dashed;
+}
+.dt-icon-border-dotted.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-border-on:before {
+  border-style: dotted;
+}
+.dt-icon-border-double.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-border-on:before {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-border-dashed.dt-icon-border-on:before {
+  border-style: dashed;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-border-dotted.dt-icon-border-on:before {
+  border-style: dotted;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-border-double.dt-icon-border-on:before {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-border-on:after {
+  border-width: 2px;
+  border-style: solid;
+  border-color: ;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-border-dashed.dt-icon-hover-border-on:after {
+  border-style: dashed;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-border-dotted.dt-icon-hover-border-on:after {
+  border-style: dotted;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-border-double.dt-icon-hover-border-on:after {
+  border-style: double;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-on:hover {
+  font-size: 32px;
+}
+#page .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-on:hover .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-on:hover .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-on:hover .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-on:hover .soc-icon {
+  color: #fff;
+  background: none;
+}
+#page .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-on:not(:hover) .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-on:not(:hover) .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-on:not(:hover) .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-on:not(:hover) .soc-icon,
+#page .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-off .soc-font-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-off .soc-font-icon,
+#page .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-off .soc-icon,
+#phantom .icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .text-icon.dt-icon-hover-off .soc-icon {
+  color: #ffffff;
+  background: none;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d.layout-1 {
+  grid-template-columns: 60px minmax(0,1fr);
+  grid-column-gap: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d.layout-2 {
+  grid-template-columns: minmax(0,1fr) 60px;
+  grid-column-gap: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d.layout-2 .text-icon {
+  margin-left: 0;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d.layout-3 {
+  grid-template-columns: 60px minmax(0,1fr);
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d.layout-3 .dt-text-title {
+  margin-left: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .dt-text-title {
+  margin-bottom: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .dt-text-desc {
+  margin-bottom: 0px;
+}
+.icon-with-text-shortcode.icon-text-id-09e2fc3bea3c743da3156488f00ac89d .default-btn-shortcode * {
+  vertical-align: middle;
+}
+</style><div class="icon-with-text-shortcode  icon-text-id-09e2fc3bea3c743da3156488f00ac89d layout-5  " ><span   class="text-icon dt-icon-bg-on dt-icon-hover-off" ><span class="icon-inner"><i class="dt-regular-icon soc-icon icomoon-the7-font-the7-login-03"></i><i class="dt-hover-icon soc-icon icomoon-the7-font-the7-login-03"></i></span></span><h4 class="dt-text-title"  >Ndunge M.</h4><div class="dt-text-desc">I am beyond impressed by your team.The gentlemen were on time,professional,careful and made the move an EXCELLENT experience.Thank you.</div></div></div></div></div></div></div>
+
+	</div><!-- #content -->
+
+	
+
+
+			</div><!-- .wf-container -->
+		</div><!-- .wf-wrap -->
+
+	
+	</div><!-- #main -->
+
+	
+
+	
+	<!-- !Footer -->
+	<footer id="footer" class="footer solid-bg">
+
+		
+			<div class="wf-wrap">
+				<div class="wf-container-footer">
+					<div class="wf-container">
+						<section id="media_image-2" class="widget widget_media_image wf-cell wf-1-3"><img width="402" height="146" src="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Nairobi-1-1.png" class="image wp-image-1641  attachment-full size-full" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Nairobi-1-1.png 402w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Nairobi-1-1-300x109.png 300w" sizes="(max-width: 402px) 100vw, 402px" /></section><section id="media_image-3" class="widget widget_media_image wf-cell wf-1-3"><img width="402" height="146" src="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Mombasa-2-1.png" class="image wp-image-1642  attachment-full size-full" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Mombasa-2-1.png 402w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/Mombasa-2-1-300x109.png 300w" sizes="(max-width: 402px) 100vw, 402px" /></section><section id="media_image-4" class="widget widget_media_image wf-cell wf-1-3"><img width="402" height="146" src="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/box-2.png" class="image wp-image-1643  attachment-full size-full" alt="" loading="lazy" style="max-width: 100%; height: auto;" srcset="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/box-2.png 402w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/box-2-300x109.png 300w" sizes="(max-width: 402px) 100vw, 402px" /></section>					</div><!-- .wf-container -->
+				</div><!-- .wf-container-footer -->
+			</div><!-- .wf-wrap -->
+
+			
+<!-- !Bottom-bar -->
+<div id="bottom-bar" class="solid-bg logo-left" role="contentinfo">
+    <div class="wf-wrap">
+        <div class="wf-container-bottom">
+
+			
+            <div class="wf-float-right">
+
+				<div class="bottom-text-block"><p>© Packers and movers ltd 2020. All rights reserved.</p>
+</div>
+            </div>
+
+        </div><!-- .wf-container-bottom -->
+    </div><!-- .wf-wrap -->
+</div><!-- #bottom-bar -->
+	</footer><!-- #footer -->
+
+
+	<a href="#" class="scroll-top"><span class="screen-reader-text">Go to Top</span></a>
+
+</div><!-- #page -->
+
+<script type="text/javascript">
+        jQuery(function(){
+        var arrLiveStats=[];
+        var WSM_PREFIX="wsm";
+		
+        jQuery(".if-js-closed").removeClass("if-js-closed").addClass("closed");
+                var wsmFnSiteLiveStats=function(){
+                           jQuery.ajax({
+                               type: "POST",
+                               url: wsm_ajaxObject.ajax_url,
+                               data: { action: 'liveSiteStats', requests: JSON.stringify(arrLiveStats), r: Math.random() }
+                           }).done(function( strResponse ) {
+                                if(strResponse!="No"){
+                                    arrResponse=JSON.parse(strResponse);
+                                    jQuery.each(arrResponse, function(key,value){
+                                    
+                                        $element= document.getElementById(key);
+                                        oldValue=parseInt($element.getAttribute("data-value").replace(/,/g, ""));
+                                        diff=parseInt(value.replace(/,/g, ""))-oldValue;
+                                        $class="";
+                                        
+                                        if(diff>=0){
+                                            diff="+"+diff;
+                                        }else{
+                                            $class="wmcRedBack";
+                                        }
+
+                                        $element.setAttribute("data-value",value);
+                                        $element.innerHTML=diff;
+                                        jQuery("#"+key).addClass($class).show().siblings(".wsmH2Number").text(value);
+                                        
+                                        if(key=="SiteUserOnline")
+                                        {
+                                            var onlineUserCnt = arrResponse.wsmSiteUserOnline;
+                                            if(jQuery("#wsmSiteUserOnline").length)
+                                            {
+                                                jQuery("#wsmSiteUserOnline").attr("data-value",onlineUserCnt);   jQuery("#wsmSiteUserOnline").next(".wsmH2Number").html("<a target=\"_blank\" href=\"?page=wsm_traffic&subPage=UsersOnline&subTab=summary\">"+onlineUserCnt+"</a>");
+                                            }
+                                        }
+                                    });
+                                    setTimeout(function() {
+                                        jQuery.each(arrResponse, function(key,value){
+                                            jQuery("#"+key).removeClass("wmcRedBack").hide();
+                                        });
+                                    }, 1500);
+                                }
+                           });
+                       }
+                       if(arrLiveStats.length>0){
+                          setInterval(wsmFnSiteLiveStats, 10000);
+                       }});
+        </script><script type="text/html" id="wpb-modifications"></script><div id="qlwapp" class="qlwapp-free qlwapp-button qlwapp-bottom-right qlwapp-all qlwapp-rounded">
+  <div class="qlwapp-container">
+        <a class="qlwapp-toggle" 
+       data-action="open" 
+       data-phone="254722644270" 
+       data-message="Hello! I&#039;m Chatting you from packers and movers website" href="javascript:void(0);" target="_blank">
+                <i class="qlwapp-icon qlwapp-whatsapp-icon"></i>
+            <i class="qlwapp-close" data-action="close">&times;</i>
+                <span class="qlwapp-text">Hi, lets Chat!</span>
+          </a>
+  </div>
+</div>
+<link href="https://fonts.googleapis.com/css?family=Roboto:500%2C400" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+		<script type="text/javascript">
+		if(typeof revslider_showDoubleJqueryError === "undefined") {
+			function revslider_showDoubleJqueryError(sliderID) {
+				var err = "<div class='rs_error_message_box'>";
+				err += "<div class='rs_error_message_oops'>Oops...</div>";
+				err += "<div class='rs_error_message_content'>";
+				err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
+				err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
+				err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
+				err += "</div>";
+			err += "</div>";
+				var slider = document.getElementById(sliderID); slider.innerHTML = err; slider.style.display = "block";
+			}
+		}
+		</script>
+<script type='text/javascript' src='https://packersandmoversltd.co.ke/wp-content/themes/dt-the7/js/main.min.js?ver=9.1.0' id='dt-main-js'></script>
+<script type='text/javascript' src='https://packersandmoversltd.co.ke/wp-content/plugins/wp-whatsapp-chat/assets/frontend/js/frontend.js?ver=a98a7e1e2070b80d861b85348b68f668' id='qlwapp-js'></script>
+<script type='text/javascript' src='https://packersandmoversltd.co.ke/wp-includes/js/wp-embed.min.js?ver=5.6' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://packersandmoversltd.co.ke/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.4.0' id='wpb_composer_front_js-js'></script>
+<div id='icon_wrapper'><a target="_blank" class='fuse_social_icons_links' data-nonce='7465298b7c' data-title='facebook' href='https://web.facebook.com/PackersandMoversKenyaltd/'>	<i class='fa fa-facebook facebook-awesome-social awesome-social'></i></a><a target="_blank" class='fuse_social_icons_links' data-nonce='7465298b7c' data-title='youtube' href='https://www.youtube.com/channel/UCCwXtddZ1uUHDzgKR5wAmnw'>	<i class='fa fa-youtube youtube-awesome-social awesome-social'></i></a>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="pswp__bg"></div>
+	<div class="pswp__scroll-wrap">
+		<div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+		</div>
+		<div class="pswp__ui pswp__ui--hidden">
+			<div class="pswp__top-bar">
+				<div class="pswp__counter"></div>
+				<button class="pswp__button pswp__button--close" title="Close (Esc)" aria-label="Close (Esc)"></button>
+				<button class="pswp__button pswp__button--share" title="Share" aria-label="Share"></button>
+				<button class="pswp__button pswp__button--fs" title="Toggle fullscreen" aria-label="Toggle fullscreen"></button>
+				<button class="pswp__button pswp__button--zoom" title="Zoom in/out" aria-label="Zoom in/out"></button>
+				<div class="pswp__preloader">
+					<div class="pswp__preloader__icn">
+						<div class="pswp__preloader__cut">
+							<div class="pswp__preloader__donut"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				<div class="pswp__share-tooltip"></div> 
+			</div>
+			<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)" aria-label="Previous (arrow left)">
+			</button>
+			<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)" aria-label="Next (arrow right)">
+			</button>
+			<div class="pswp__caption">
+				<div class="pswp__caption__center"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
