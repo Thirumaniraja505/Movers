@@ -1,0 +1,2359 @@
+<!DOCTYPE html>
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<meta name="theme-color" content="#dd3333"/>	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	        <script type="text/javascript">
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                var originalAddEventListener = EventTarget.prototype.addEventListener,
+                    oldWidth = window.innerWidth;
+
+                EventTarget.prototype.addEventListener = function (eventName, eventHandler, useCapture) {
+                    if (eventName === "resize") {
+                        originalAddEventListener.call(this, eventName, function (event) {
+                            if (oldWidth === window.innerWidth) {
+                                return;
+                            }
+                            else if (oldWidth !== window.innerWidth) {
+                                oldWidth = window.innerWidth;
+                            }
+                            if (eventHandler.handleEvent) {
+                                eventHandler.handleEvent.call(this, event);
+                            }
+                            else {
+                                eventHandler.call(this, event);
+                            };
+                        }, useCapture);
+                    }
+                    else {
+                        originalAddEventListener.call(this, eventName, eventHandler, useCapture);
+                    };
+                };
+            };
+        </script>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+			<style>
+			.fuse_social_icons_links {
+			    display: block;
+			}
+			.awesome-social-img img {
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%,-50%);
+			}
+
+			.awesome-social-img {
+			    position: relative;
+			}			
+			.icon_wrapper .awesome-social {
+			    font-family: 'FontAwesome' !important;
+			}
+			#icon_wrapper .fuse_social_icons_links .awesome-social {
+			    font-family: "FontAwesome" !important;
+			    ext-rendering: auto !important;
+			    -webkit-font-smoothing: antialiased !important;
+			    -moz-osx-font-smoothing: grayscale !important;
+			}
+									
+			
+			#icon_wrapper{
+				position: fixed;
+				top: 50%;
+				left: 0px;
+				z-index: 99999;
+			}
+			
+			.awesome-social
+
+			{
+
+            margin-top:2px;
+
+			color: #fff !important;
+
+			text-align: center !important;
+
+			display: block;
+
+			
+			line-height: 51px !important;
+
+			width: 48px !important;
+
+			height: 48px !important;
+
+			font-size: 28px !important;
+
+			
+				-moz-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* For Safari 3.1 to 6.0 */
+
+
+
+				-webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* For Safari 3.1 to 6.0 */
+
+				transition: width 0.5s, height 0.5s, transform 0.5s;
+
+
+
+				
+
+
+			}
+
+			
+			.awesome-social:hover
+
+			{
+
+
+
+			-webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+
+				transform: rotate(deg);
+
+					-moz-transform: rotate(360deg); /* Chrome, Safari, Opera */
+
+							-ms-transform: rotate(360deg); /* Chrome, Safari, Opera */
+
+
+
+			}
+
+				
+			.fuse_social_icons_links
+
+			{
+
+			outline:0 !important;
+
+
+
+			}
+
+			.fuse_social_icons_links:hover{
+
+			text-decoration:none !important;
+
+			}
+
+			
+			.fb-awesome-social
+
+			{
+
+			background: #3b5998;
+			border-color: #3b5998;
+			
+			}
+			.facebook-awesome-social
+
+			{
+
+			background: #3b5998;
+			border-color: #3b5998;
+						}
+
+
+			.tw-awesome-social
+
+			{
+
+			background:#00aced;
+			border-color: #00aced;
+			
+			}
+			.twitter-awesome-social
+
+			{
+
+			background:#00aced;
+			border-color: #00aced;
+			
+			}
+			.rss-awesome-social
+
+			{
+
+			background:#FA9B39;
+			border-color: #FA9B39;
+			
+			}
+
+			.linkedin-awesome-social
+
+			{
+
+			background:#007bb6;
+			border-color: #007bb6;
+						}
+
+			.youtube-awesome-social
+
+			{
+
+			background:#bb0000;
+			border-color: #bb0000;
+						}
+
+			.flickr-awesome-social
+
+			{
+
+			background: #ff0084;
+			border-color: #ff0084;
+						}
+
+			.pinterest-awesome-social
+
+			{
+
+			background:#cb2027;
+			border-color: #cb2027;
+						}
+
+			.stumbleupon-awesome-social
+
+			{
+
+			background:#f74425 ;
+			border-color: #f74425;
+						}
+
+			.google-plus-awesome-social
+
+			{
+
+			background:#f74425 ;
+			border-color: #f74425;
+						}
+
+			.instagram-awesome-social
+
+			{
+
+			    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+			    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+			    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+			    border-color: #f09433;
+					    
+
+			}
+
+			.tumblr-awesome-social
+
+			{
+
+			background: #32506d ;
+			border-color: #32506d;
+						}
+
+			.vine-awesome-social
+
+			{
+
+			background: #00bf8f ;
+			border-color: #00bf8f;
+						}
+
+            .vk-awesome-social {
+
+
+
+            background: #45668e ;
+            border-color: #45668e;
+            
+            }
+
+            .soundcloud-awesome-social
+
+                {
+
+            background: #ff3300 ;
+            border-color: #ff3300;
+            
+                }
+
+                .reddit-awesome-social{
+
+
+
+            background: #ff4500 ;
+            border-color: #ff4500;
+
+                            }
+
+                .stack-awesome-social{
+
+
+
+            background: #fe7a15 ;
+            border-color: #fe7a15;
+            
+                }
+
+                .behance-awesome-social{
+
+            background: #1769ff ;
+            border-color: #1769ff;
+            
+                }
+
+                .github-awesome-social{
+
+            background: #999999 ;
+            border-color: #999999;
+            
+
+
+                }
+
+                .envelope-awesome-social{
+
+                  background: #ccc ;
+ 				  border-color: #ccc;                 
+ 				                  }
+
+/*  Mobile */
+
+
+
+
+
+
+/* Custom Background */
+
+
+             
+
+
+
+
+			</style>
+
+<style>
+#wpadminbar #wp-admin-bar-wsm_free_top_button .ab-icon:before {
+	content: "\f239";
+	color: #FF9800;
+	top: 3px;
+}
+</style>
+	<!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Relocating in Nairobi Kenya | Special guide to Nairobi Estates and their ammenities</title>
+	<meta name="description" content="Relocating in Nairobi Kenya can be tricky if you don&#039;t know the surrounding estates well,this post will help to make an informed desicion" />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://packersandmoversltd.co.ke/relocating-in-nairobi-kenya/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Relocating in Nairobi Kenya | Special guide to Nairobi Estates and their ammenities" />
+	<meta property="og:description" content="Relocating in Nairobi Kenya can be tricky if you don&#039;t know the surrounding estates well,this post will help to make an informed desicion" />
+	<meta property="og:url" content="https://packersandmoversltd.co.ke/relocating-in-nairobi-kenya/" />
+	<meta property="og:site_name" content="Packers and movers Kenya Ltd | Best movers in Nairobi Kenya" />
+	<meta property="article:publisher" content="https://www.facebook.com/PackersandMoversKenyaltd/" />
+	<meta property="article:modified_time" content="2020-12-19T07:07:14+00:00" />
+	<meta property="og:image" content="images/Relocation-in-Nairobi-1.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="29 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://packersandmoversltd.co.ke/#website","url":"https://packersandmoversltd.co.ke/","name":"Packers and movers Kenya Ltd | Best movers in Nairobi Kenya","description":"&quot;Relocation wizards&quot;","potentialAction":[{"@type":"SearchAction","target":"https://packersandmoversltd.co.ke/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en"},{"@type":"ImageObject","@id":"https://packersandmoversltd.co.ke/relocating-in-nairobi-kenya/#primaryimage","inLanguage":"en","url":"images/Relocation-in-Nairobi-1.jpg","width":1007,"height":539},{"@type":"WebPage","@id":"https://packersandmoversltd.co.ke/relocating-in-nairobi-kenya/#webpage","url":"https://packersandmoversltd.co.ke/relocating-in-nairobi-kenya/","name":"Relocating in Nairobi Kenya | Special guide to Nairobi Estates and their ammenities","isPartOf":{"@id":"https://packersandmoversltd.co.ke/#website"},"primaryImageOfPage":{"@id":"https://packersandmoversltd.co.ke/relocating-in-nairobi-kenya/#primaryimage"},"datePublished":"2020-12-01T09:18:52+00:00","dateModified":"2020-12-19T07:07:14+00:00","description":"Relocating in Nairobi Kenya can be tricky if you don't know the surrounding estates well,this post will help to make an informed desicion","inLanguage":"en","potentialAction":[{"@type":"ReadAction","target":["https://packersandmoversltd.co.ke/relocating-in-nairobi-kenya/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Packers and movers Kenya Ltd | Best movers in Nairobi Kenya &raquo; Feed" href="https://packersandmoversltd.co.ke/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Packers and movers Kenya Ltd | Best movers in Nairobi Kenya &raquo; Comments Feed" href="https://packersandmoversltd.co.ke/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/packersandmoversltd.co.ke\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' href='css/export-wp-page-to-static-html-public.css'>
+<link rel='stylesheet' href='css/rs6.css'>
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' href='css/style.css'>
+<link rel='stylesheet' href='css/frontend.css'>
+<link rel='stylesheet' href='css/js_composer.min.css'>
+<link rel='stylesheet' href='css/5023.css'>
+<link rel='stylesheet' href='css/main.min.css'>
+<style id='dt-main-inline-css' type='text/css'>
+body #load {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 9901;
+  opacity: 1;
+  visibility: visible;
+  transition: all .35s ease-out;
+}
+.load-wrap {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.load-wrap > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#load {
+  background-color: #ffffff;
+}
+.uil-default rect:not(.bk) {
+  fill: #ffc000;
+}
+.uil-ring > path {
+  fill: #ffc000;
+}
+.ring-loader .circle {
+  fill: #ffc000;
+}
+.ring-loader .moving-circle {
+  fill: #ffc000;
+}
+.uil-hourglass .glass {
+  stroke: #ffc000;
+}
+.uil-hourglass .sand {
+  fill: #ffc000;
+}
+.spinner-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg width='75px' height='75px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='uil-default'%3E%3Crect x='0' y='0' width='100' height='100' fill='none' class='bk'%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(0 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(30 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.08333333333333333s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(60 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.16666666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(90 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.25s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(120 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.3333333333333333s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(150 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.4166666666666667s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(180 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(210 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5833333333333334s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(240 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.6666666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(270 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.75s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(300 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.8333333333333334s' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='%23ffc000' transform='rotate(330 50 50) translate(0 -30)'%3E  %3Canimate attributeName='opacity' from='1' to='0' dur='1s' begin='0.9166666666666666s' repeatCount='indefinite'/%3E%3C/rect%3E%3C/svg%3E");
+}
+.ring-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='72' height='72' fill='%23ffc000'%3E   %3Cpath opacity='.25' d='M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4'/%3E   %3Cpath d='M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z'%3E     %3CanimateTransform attributeName='transform' type='rotate' from='0 16 16' to='360 16 16' dur='0.8s' repeatCount='indefinite' /%3E   %3C/path%3E %3C/svg%3E");
+}
+.hourglass-loader .load-wrap {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='72' height='72' fill='%23ffc000'%3E   %3Cpath transform='translate(2)' d='M0 12 V20 H4 V12z'%3E      %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline'  /%3E   %3C/path%3E   %3Cpath transform='translate(8)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.2' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline'  /%3E   %3C/path%3E   %3Cpath transform='translate(14)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.4' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E   %3Cpath transform='translate(20)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.6' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E   %3Cpath transform='translate(26)' d='M0 12 V20 H4 V12z'%3E     %3Canimate attributeName='d' values='M0 12 V20 H4 V12z; M0 4 V28 H4 V4z; M0 12 V20 H4 V12z; M0 12 V20 H4 V12z' dur='1.2s' repeatCount='indefinite' begin='0.8' keytimes='0;.2;.5;1' keySplines='0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.8 0.4 0.8' calcMode='spline' /%3E   %3C/path%3E %3C/svg%3E");
+}
+
+</style>
+<link rel='stylesheet' href='css/icomoon-the7-font.min.css'>
+<link rel='stylesheet' href='css/custom.css'>
+<link rel='stylesheet' href='css/media.css'>
+<link rel='stylesheet' href='css/mega-menu.css'>
+<link rel='stylesheet' href='css/style.css'>
+		<script>
+			/* <![CDATA[ */
+			var rcewpp = {
+				"ajax_url":"https://packersandmoversltd.co.ke/wp-admin/admin-ajax.php",
+				"nonce": "695881146a",
+				"home_url": "https://packersandmoversltd.co.ke"
+			};
+			/* ]]\> */
+		</script>
+		<script type='text/javascript' src='js/jquery.min.js' id='jquery-core-js'></script>
+<script type='text/javascript' src='js/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='js/export-wp-page-to-static-html-public.js' id='export-wp-page-to-static-html-js'></script>
+<script type='text/javascript' id='fuse-social-script-js-extra'>
+/* <![CDATA[ */
+var fuse_social = {"ajax_url":"https:\/\/packersandmoversltd.co.ke\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='js/fuse_script.js' id='fuse-social-script-js'></script>
+<script type='text/javascript' src='js/rbtools.min.js' id='tp-tools-js'></script>
+<script type='text/javascript' src='js/rs6.min.js' id='revmin-js'></script>
+<script type='text/javascript' id='dt-above-fold-js-extra'>
+/* <![CDATA[ */
+var dtLocal = {"themeUrl":"https:\/\/packersandmoversltd.co.ke\/wp-content\/themes\/dt-the7","passText":"To view this protected post, enter the password below:","moreButtonText":{"loading":"Loading...","loadMore":"Load more"},"postID":"1850","ajaxurl":"https:\/\/packersandmoversltd.co.ke\/wp-admin\/admin-ajax.php","REST":{"baseUrl":"https:\/\/packersandmoversltd.co.ke\/wp-json\/the7\/v1","endpoints":{"sendMail":"\/send-mail"}},"contactMessages":{"required":"One or more fields have an error. Please check and try again.","terms":"Please accept the privacy policy.","fillTheCaptchaError":"Please, fill the captcha."},"captchaSiteKey":"6LdEbqMZAAAAAIWKmhcx7RhJhIGOYI0J7tDXaLM2","ajaxNonce":"1cab436689","pageData":{"type":"page","template":"page","layout":null},"themeSettings":{"smoothScroll":"off","lazyLoading":false,"accentColor":{"mode":"solid","color":"#dd3333"},"desktopHeader":{"height":100},"ToggleCaptionEnabled":"disabled","ToggleCaption":"Navigation","floatingHeader":{"showAfter":140,"showMenu":true,"height":70,"logo":{"showLogo":true,"html":"<img class=\" preload-me\" src=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg\" srcset=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w, https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w\" width=\"267\" height=\"48\"   sizes=\"267px\" alt=\"Packers and movers Kenya Ltd | Best movers in Nairobi Kenya\" \/>","url":"https:\/\/packersandmoversltd.co.ke\/"}},"topLine":{"floatingTopLine":{"logo":{"showLogo":false,"html":""}}},"mobileHeader":{"firstSwitchPoint":992,"secondSwitchPoint":778,"firstSwitchPointHeight":60,"secondSwitchPointHeight":60,"mobileToggleCaptionEnabled":"disabled","mobileToggleCaption":"Menu"},"stickyMobileHeaderFirstSwitch":{"logo":{"html":"<img class=\" preload-me\" src=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg\" srcset=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w, https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w\" width=\"267\" height=\"48\"   sizes=\"267px\" alt=\"Packers and movers Kenya Ltd | Best movers in Nairobi Kenya\" \/>"}},"stickyMobileHeaderSecondSwitch":{"logo":{"html":"<img class=\" preload-me\" src=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/Untitled-2.jpg\" srcset=\"https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/Untitled-2.jpg 219w, https:\/\/packersandmoversltd.co.ke\/wp-content\/uploads\/2020\/07\/Untitled-2.jpg 219w\" width=\"219\" height=\"51\"   sizes=\"219px\" alt=\"Packers and movers Kenya Ltd | Best movers in Nairobi Kenya\" \/>"}},"content":{"textColor":"#000000","headerColor":"#000000"},"sidebar":{"switchPoint":990},"boxedWidth":"1280px","stripes":{"stripe1":{"textColor":"#828282","headerColor":"#303030"},"stripe2":{"textColor":"#ffffff","headerColor":"#ffffff"},"stripe3":{"textColor":"#ffffff","headerColor":"#ffffff"}}},"VCMobileScreenWidth":"768"};
+var dtShare = {"shareButtonText":{"facebook":"Share on Facebook","twitter":"Tweet","pinterest":"Pin it","linkedin":"Share on Linkedin","whatsapp":"Share on Whatsapp"},"overlayOpacity":"85"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='js/above-the-fold.min.js' id='dt-above-fold-js'></script>
+<link rel="https://api.w.org/" href="https://packersandmoversltd.co.ke/wp-json/" /><link rel="alternate" type="application/json" href="https://packersandmoversltd.co.ke/wp-json/wp/v2/pages/1850" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://packersandmoversltd.co.ke/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://packersandmoversltd.co.ke/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<link rel='shortlink' href='https://packersandmoversltd.co.ke/?p=1850' />
+<link rel="alternate" type="application/json+oembed" href="https://packersandmoversltd.co.ke/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpackersandmoversltd.co.ke%2Frelocating-in-nairobi-kenya%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://packersandmoversltd.co.ke/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpackersandmoversltd.co.ke%2Frelocating-in-nairobi-kenya%2F&#038;format=xml" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178057792-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-178057792-1');
+</script><!-- Wordpress Stats Manager -->
+    <script type="text/javascript">
+          var _wsm = _wsm || [];
+           _wsm.push(['trackPageView']);
+           _wsm.push(['enableLinkTracking']);
+           _wsm.push(['enableHeartBeatTimer']);
+          (function() {
+            var u="https://packersandmoversltd.co.ke/wp-content/plugins/wp-stats-manager/";
+            _wsm.push(['setUrlReferrer', ""]);
+            _wsm.push(['setTrackerUrl',"https://packersandmoversltd.co.ke/?wmcAction=wmcTrack"]);
+            _wsm.push(['setSiteId', "1"]);
+            _wsm.push(['setPageId', "1850"]);
+            _wsm.push(['setWpUserId', "0"]);           
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/wsm_new.js'; s.parentNode.insertBefore(g,s);
+          })();
+    </script>
+    <!-- End Wordpress Stats Manager Code --><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<meta name="generator" content="Powered by Slider Revolution 6.2.23 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) { 
+	var load = document.getElementById("load");
+	if(!load.classList.contains('loader-removed')){
+		var removeLoading = setTimeout(function() {
+			load.className += " loader-removed";
+		}, 300);
+	}
+});
+</script>
+		<link rel="icon" href="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/favicon-1.jpg" type="image/jpeg" sizes="16x16"/><link rel="apple-touch-icon" href="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/favicon-1.jpg"><link rel="apple-touch-icon" sizes="76x76" href="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/favicon-1.jpg"><link rel="apple-touch-icon" sizes="120x120" href="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/favicon-1.jpg"><link rel="apple-touch-icon" sizes="152x152" href="https://packersandmoversltd.co.ke/wp-content/uploads/2020/07/favicon-1.jpg"><script type="text/javascript">function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {				 
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;	
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;	
+				try {								
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);		
+					if(e.layout==="fullscreen" || e.l==="fullscreen") 						
+						newh = Math.max(e.mh,window.RSIH);					
+					else{					
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];					
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,						
+							sl;					
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;					
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];									
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}															
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);					
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}				
+					if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));					
+					document.getElementById(e.c).height = newh+"px";
+					window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";				
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}					   
+			//});
+		  };</script>
+            <style>
+              :root { 
+                --qlwapp-scheme-brand:#81d742;--qlwapp-scheme-qlwapp_scheme_form_nonce:057342f9ed;--qlwapp-scheme-_wp_http_referer:/wp-admin/admin.php?page=qlwapp_scheme;              }
+                                #qlwapp .qlwapp-toggle,
+                  #qlwapp .qlwapp-box .qlwapp-header,
+                  #qlwapp .qlwapp-box .qlwapp-user,
+                  #qlwapp .qlwapp-box .qlwapp-user:before {
+                    background-color: var(--qlwapp-scheme-brand);  
+                  }
+                                        </style>
+            <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1608361628389{padding-top: 30px !important;padding-bottom: 30px !important;}.vc_custom_1608361423144{padding-top: 40px !important;padding-bottom: 40px !important;}.vc_custom_1608305790771{padding-bottom: 20px !important;}.vc_custom_1608305885754{padding-bottom: 50px !important;}.vc_custom_1608306256994{padding-top: 20px !important;padding-bottom: 20px !important;}.vc_custom_1608359828141{padding-top: 30px !important;padding-bottom: 30px !important;}.vc_custom_1608359849324{padding-top: 30px !important;padding-bottom: 30px !important;}.vc_custom_1608359889327{padding-top: 30px !important;padding-bottom: 30px !important;}.vc_custom_1608359913158{padding-top: 30px !important;padding-bottom: 30px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<body class="page-template-default page page-id-1850 wp-embed-responsive title-off dt-responsive-on ouside-mobile-menu-close-icon ouside-menu-close-icon mobile-hamburger-close-bg-enable mobile-hamburger-close-bg-hover-enable  fade-medium-mobile-menu-close-icon fade-small-menu-close-icon srcset-enabled btn-3d custom-btn-color custom-btn-hover-color phantom-sticky phantom-shadow-decoration phantom-main-logo-on sticky-mobile-header top-header first-switch-logo-left first-switch-menu-right second-switch-logo-left second-switch-menu-right layzr-loading-on popup-message-style the7-ver-9.1.0 wpb-js-composer js-comp-ver-6.4.0 vc_responsive">
+<!-- The7 9.1.0 -->
+<div id="load" class="ring-loader">
+	<div class="load-wrap"></div>
+</div>
+<div id="page" >
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+<div class="masthead inline-header right widgets full-height shadow-decoration shadow-mobile-header-decoration medium-mobile-menu-icon mobile-menu-icon-bg-on mobile-menu-icon-hover-bg-on show-mobile-logo"  role="banner">
+
+	<div class="top-bar full-width-line top-bar-line-hide">
+	<div class="top-bar-bg" ></div>
+	<div class="left-widgets mini-widgets"><div class="text-area hide-on-desktop near-logo-first-switch in-menu-second-switch"><p>Follow us</p>
+</div><div class="soc-ico hide-on-desktop in-menu-first-switch in-menu-second-switch custom-bg disabled-border border-off hover-accent-bg hover-disabled-border  hover-border-off"><a title="Facebook page opens in new window" href="https://web.facebook.com/PackersandMoversKenyaltd/" target="_blank" class="facebook"><span class="soc-font-icon"></span><span class="screen-reader-text">Facebook page opens in new window</span></a><a title="Instagram page opens in new window" href="https://web.facebook.com/PackersandMoversKenyaltd/" target="_blank" class="instagram"><span class="soc-font-icon"></span><span class="screen-reader-text">Instagram page opens in new window</span></a></div></div><div class="right-widgets mini-widgets"><a href="https://packersandmoversltd.co.ke/contact-us/" class="mini-contacts phone show-on-desktop in-top-bar-left in-top-bar" ><i class=" icomoon-the7-font-the7-phone-05"></i>Nairobi +254 722 644 270</a><a href="https://packersandmoversltd.co.ke/contact-us/" class="mini-contacts multipurpose_2 show-on-desktop in-top-bar-left in-top-bar" ><i class=" icomoon-the7-font-the7-phone-05"></i>Mombasa +254 722 886 275</a><a href="https://packersandmoversltd.co.ke/contact-us/" class="mini-contacts email show-on-desktop in-top-bar-left in-top-bar" ><i class=" the7-mw-icon-mail"></i>info@packersandmoversltd.co.ke</a></div></div>
+
+	<header class="header-bar">
+
+		<div class="branding">
+	<div id="site-title" class="assistive-text">Packers and movers Kenya Ltd | Best movers in Nairobi Kenya</div>
+	<div id="site-description" class="assistive-text">&quot;Relocation wizards&quot;</div>
+	<a class="same-logo" href="https://packersandmoversltd.co.ke/"><img class=" preload-me" src="images/PACKERS-AND-MOVERS-LOGO-3-B.jpg" srcset="images/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w, images/PACKERS-AND-MOVERS-LOGO-3-B.jpg 267w" width="267" height="48"   sizes="267px" alt="Packers and movers Kenya Ltd | Best movers in Nairobi Kenya" /><img class="mobile-logo preload-me" src="images/Untitled-2.jpg" srcset="images/Untitled-2.jpg 219w, images/Untitled-2.jpg 219w" width="219" height="51"   sizes="219px" alt="Packers and movers Kenya Ltd | Best movers in Nairobi Kenya" /></a></div>
+
+		<ul id="primary-menu" class="main-nav underline-decoration upwards-line level-arrows-on outside-item-remove-margin" role="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1597 first"><a href='https://packersandmoversltd.co.ke/' data-level='1'><span class="menu-item-text"><span class="menu-text">Home</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1598"><a href='https://packersandmoversltd.co.ke/about-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">About Us</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1599 has-children"><a href='https://packersandmoversltd.co.ke/services/' class='not-clickable-item' data-level='1'><span class="menu-item-text"><span class="menu-text">Services</span></span></a><ul class="sub-nav level-arrows-on"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1475 first"><a href='https://packersandmoversltd.co.ke/domestic-house-shifting/' data-level='2'><span class="menu-item-text"><span class="menu-text">Domestic House Shifting</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1476"><a href='https://packersandmoversltd.co.ke/office-relocations/' data-level='2'><span class="menu-item-text"><span class="menu-text">Office Relocations</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1478"><a href='https://packersandmoversltd.co.ke/settling-in-services-2/' data-level='2'><span class="menu-item-text"><span class="menu-text">Settling in Services</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1602"><a href='https://packersandmoversltd.co.ke/cross-border-moves/' data-level='2'><span class="menu-item-text"><span class="menu-text">Cross Border Moves</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1600"><a href='https://packersandmoversltd.co.ke/international-relocation/' data-level='2'><span class="menu-item-text"><span class="menu-text">International relocation</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601"><a href='https://packersandmoversltd.co.ke/storage/' data-level='2'><span class="menu-item-text"><span class="menu-text">Storage</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1474"><a href='https://packersandmoversltd.co.ke/blog/' data-level='1'><span class="menu-item-text"><span class="menu-text">Blog</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1718 has-children"><a href='https://packersandmoversltd.co.ke/resource-center/' class='not-clickable-item' data-level='1'><span class="menu-item-text"><span class="menu-text">Resource center</span></span></a><ul class="sub-nav level-arrows-on"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1755 first"><a href='https://packersandmoversltd.co.ke/privacy-policy/' data-level='2'><span class="menu-item-text"><span class="menu-text">Privacy policy</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1758"><a href='https://packersandmoversltd.co.ke/returning-residents-guide/' data-level='2'><span class="menu-item-text"><span class="menu-text">Returning Residents guide</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1477"><a href='https://packersandmoversltd.co.ke/contact-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">Contact us</span></span></a></li> </ul>
+		<div class="mini-widgets"><a href="https://packersandmoversltd.co.ke/quotation/" class="microwidget-btn mini-button header-elements-button-2 show-on-desktop near-logo-first-switch in-menu-second-switch microwidget-btn-bg-on microwidget-btn-hover-bg-on border-on hover-border-on btn-icon-align-right" target="_blank"><span>QUOTATION</span></a></div>
+	</header>
+
+</div>
+<div class="dt-close-mobile-menu-icon"><div class="close-line-wrap"><span class="close-line"></span><span class="close-line"></span><span class="close-line"></span></div></div><div class="dt-mobile-header mobile-menu-show-divider">
+		<ul id="mobile-menu" class="mobile-main-nav" role="navigation">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1597 first"><a href='https://packersandmoversltd.co.ke/' data-level='1'><span class="menu-item-text"><span class="menu-text">Home</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1598"><a href='https://packersandmoversltd.co.ke/about-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">About Us</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1599 has-children"><a href='https://packersandmoversltd.co.ke/services/' class='not-clickable-item' data-level='1'><span class="menu-item-text"><span class="menu-text">Services</span></span></a><ul class="sub-nav level-arrows-on"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1475 first"><a href='https://packersandmoversltd.co.ke/domestic-house-shifting/' data-level='2'><span class="menu-item-text"><span class="menu-text">Domestic House Shifting</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1476"><a href='https://packersandmoversltd.co.ke/office-relocations/' data-level='2'><span class="menu-item-text"><span class="menu-text">Office Relocations</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1478"><a href='https://packersandmoversltd.co.ke/settling-in-services-2/' data-level='2'><span class="menu-item-text"><span class="menu-text">Settling in Services</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1602"><a href='https://packersandmoversltd.co.ke/cross-border-moves/' data-level='2'><span class="menu-item-text"><span class="menu-text">Cross Border Moves</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1600"><a href='https://packersandmoversltd.co.ke/international-relocation/' data-level='2'><span class="menu-item-text"><span class="menu-text">International relocation</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601"><a href='https://packersandmoversltd.co.ke/storage/' data-level='2'><span class="menu-item-text"><span class="menu-text">Storage</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1474"><a href='https://packersandmoversltd.co.ke/blog/' data-level='1'><span class="menu-item-text"><span class="menu-text">Blog</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1718 has-children"><a href='https://packersandmoversltd.co.ke/resource-center/' class='not-clickable-item' data-level='1'><span class="menu-item-text"><span class="menu-text">Resource center</span></span></a><ul class="sub-nav level-arrows-on"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1755 first"><a href='https://packersandmoversltd.co.ke/privacy-policy/' data-level='2'><span class="menu-item-text"><span class="menu-text">Privacy policy</span></span></a></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1758"><a href='https://packersandmoversltd.co.ke/returning-residents-guide/' data-level='2'><span class="menu-item-text"><span class="menu-text">Returning Residents guide</span></span></a></li> </ul></li> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1477"><a href='https://packersandmoversltd.co.ke/contact-us/' data-level='1'><span class="menu-item-text"><span class="menu-text">Contact us</span></span></a></li> 	</ul>
+	<div class='mobile-mini-widgets-in-menu'></div>
+</div>
+
+
+
+<div id="main" class="sidebar-none sidebar-divider-off">
+
+	
+	<div class="main-gradient"></div>
+	<div class="wf-wrap">
+	<div class="wf-container-main">
+
+	
+
+
+	<div id="content" class="content" role="main">
+
+		<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<h1><b>Relocating in Nairobi</b></h1>
+<p><b>Nairobi</b> is the capital city of <a href="https://www.britannica.com/place/Kenya">Kenya</a>. It is situated in the south-central part of the country, in the highlands at an elevation of about 5,500 feet (1,680 metres) above the sea level. The city lies 300 miles (480 Kilometres) northwest of <a href="https://www.britannica.com/place/Mombasa">Mombasa</a>, Kenya’s major port on the <a href="https://www.britannica.com/place/Indian-Ocean">Indian Ocean</a>.</p>
+<p>The city originated in the late 1890s as a colonial railway settlement, taking its name from a water hole known to the <a href="https://www.britannica.com/topic/Maasai">Maasai</a> people as Enkare Nairobi (“Cold Water”). When the railhead arrived there in 1899, the British colonial capital of Ukamba province was transferred from Machakos (then Masaku) to the site, and in 1905 Nairobi became the capital of the <a href="https://www.britannica.com/place/British-East-Africa">British East Africa Protectorate</a>. From about 1900 onward, when a small Indian bazaar was established at Nairobi, the city was also a trading centre.</p>
+<p>Nairobi is one of the most developed cities in Africa. It is the air and the capital city of Kenya has become popular with people from all over the world, and it’s no wonder then that many international organizations have set base here, and many people are choosing this city as their home.</p>
+<p>Nairobi is the only city in the world that houses a game park. It as well boasts being the headquarters of the United Nations Environment Programme (UNEP) and the United Nations Human Settlements Programme (<i>UN</i>&#8211;<i>Habitat</i>).</p>
+<h3><b>Suburbs where you can live while in Nairobi</b></h3>
+
+		</div>
+	</div>
+<h1 style="text-align: center;font-family:Ubuntu;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1608361628389" >KAREN</h1></div></div></div></div><section class="vc_section"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><img loading="lazy" class="size-full wp-image-1815 aligncenter" src="images/Relocation-in-Nairobi-1.jpg" alt="" width="1007" height="539" srcset="images/Relocation-in-Nairobi-1.jpg 1007w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/11/Relocation-in-Nairobi-1-300x161.jpg 300w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/11/Relocation-in-Nairobi-1-768x411.jpg 768w" sizes="(max-width: 1007px) 100vw, 1007px" /><br />
+There are many choices on where to stay, Packers and Movers Kenya Limited will hint to you some of the trendiest neighbourhoods in Nairobi where you can live.</p>
+<p>Photo by Villa Care Kenya</p>
+<p>Karen is one of the most popular leafy suburbs in Nairobi. Located on the southwest of central Nairobi (about 17Kilometers from the city centre), it is one of the areas where the ‘who is who’ in Nairobi lives.</p>
+<p>Occupied by mainly wealthy families and expats (mostly Europeans), the area is defined by big beautiful, palatial homes, well-trimmed fences, high-end malls, restaurants, and schools.</p>
+<p>It is quite a distance from the city centre, so you have to decide if that is a factor that would stop you from moving there.</p>
+<p><b>Key information</b></p>
+<p>Distance from City Centre:            17 Kilometres</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-pink vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1606814365404-c012bad5-e136" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1606814365404-c012bad5-e136" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Shopping Malls in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Galeria Mall Karen</li>
+<li>The Hub Karen</li>
+<li>Karen-End Shopping Centre</li>
+<li>The Waterfront Karen</li>
+<li>Karen Triange</li>
+<li>Karen Plains Arcade</li>
+<li>Karen Office Campus</li>
+<li>The Well Karen</li>
+<li><a href="https://packersandmoversltd.co.ke/">Best movers(Relocation company) in Karen</a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1606814365431-2b3ebd47-796e" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1606814365431-2b3ebd47-796e" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Schools in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Light International School</li>
+<li>Brookhouse School</li>
+<li>Banda School</li>
+<li>Cambridge International School</li>
+<li>Hillcrest International School</li>
+<li>Emerald International School</li>
+<li>The Netherlands School Society</li>
+<li>Stem International School</li>
+<li> West Nairobi School</li>
+<li>Braeside School</li>
+<li>Nairobi International Schools</li>
+<li>Surina International Montessori Schools</li>
+<li>International School of Kenya</li>
+<li>Gems Cambridge international School</li>
+<li>SABIS International School</li>
+<li>Nairobi Academy, the</li>
+<li>Karen International College</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1608302703511-273848b9-9d41" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1608302703511-273848b9-9d41" data-vc-accordion data-vc-container=".vc_tta-container"><i class="vc_tta-icon fas fa-truck"></i><span class="vc_tta-title-text">Best Movers in Karen</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><span style="color: #000000;">Packers and movers Kenya limited offer:-</span></p>
+<ul>
+<li><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/"><span style="color: #000000;">Domestic House Shifting</span></a></li>
+<li><a href="https://packersandmoversltd.co.ke/office-relocations/"><span style="color: #000000;">Office Relocations</span></a></li>
+<li><span style="color: #000000;">Settling in Services</span></li>
+<li><a href="https://packersandmoversltd.co.ke/cross-border-moves/"><span style="color: #000000;">Cross border moves</span></a></li>
+<li><a href="https://packersandmoversltd.co.ke/international-relocation/"><span style="color: #000000;">International Relocation</span></a></li>
+<li><a href="https://packersandmoversltd.co.ke/storage/"><span style="color: #000000;">Storage</span></a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1606814413236-e20d0460-6347" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1606814413236-e20d0460-6347" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Worship places in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>ACK St Matthews Karen</li>
+<li>Calvary Chapel Nairobi, Kenya</li>
+<li>Change point Deliverance Church-Karen</li>
+<li>Christ Is The Answer Ministries (CITAM) Karen</li>
+<li>Faith Evangelistic Ministry Family Church</li>
+<li>KAG KAREN CHRISTIAN CENTRE</li>
+<li>Karen Community Church</li>
+<li>Karen Vineyard Church</li>
+<li>Karen Vineyard Church</li>
+<li>Nairobi Chapel Karen</li>
+<li>Redeemed Gospel church Karen End</li>
+<li>Redeemer Bible Church</li>
+<li>Regina Caeli Karen Catholic Church</li>
+<li>Seventh-day Adventist Church Karen Community</li>
+<li>St Francis Church-Karen</li>
+<li>St. Luke’s Methodist Church Karen</li>
+<li>Burhani Masjid</li>
+<li>DSC Mosque</li>
+<li>Embulbul mosque</li>
+<li>Jamia Mosque</li>
+<li>Karen Mosque</li>
+<li>Khoja Mosque مسجد</li>
+<li>Lenana School Jamia Mosque</li>
+<li>Madina Centre Mosque Nairobi</li>
+<li>Masjid Al Zahra</li>
+<li>Masjid Al-Huda &#8211; South B</li>
+<li>Ngong Mosque</li>
+<li>Parklands Masjid</li>
+<li>Parklands Mosque مسجد</li>
+<li>Rasulil Akram Mosque and Madresa</li>
+<li>The Hub prayer room</li>
+<li>The waterfront prayer room Men/Women</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1606814415191-8d2e15ce-5422" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1606814415191-8d2e15ce-5422" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Access to Airports</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Wilson Airport – 9 Kilometres</li>
+<li>Jomo Kenyatta International Airport – 25 Kilometres</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1606814453880-ab71dea7-ada5" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1606814453880-ab71dea7-ada5" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Recreation facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>The <a href="https://www.discoverwalks.com/blog/nairobi/a-visit-to-the-giraffe-centre-in-nairobi/">Giraffe Centre</a></li>
+<li>Nairobi National Park,</li>
+<li>The <a href="https://www.discoverwalks.com/blog/nairobi/a-visit-to-the-david-sheldrick-wildlife-trust-in-nairobi/">David Sheldrick Wildlife Trust</a>,</li>
+<li>The Karen Blixen Museum,</li>
+<li>The Resurrection Gardens – a green sanctuary the Karen Country Club for a game of golf, Ngong Racecourse for horse races the Oloolua Nature trail.</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1606814454889-4bc9d4d4-7b14" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1606814454889-4bc9d4d4-7b14" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Banking facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<blockquote><p>
+Generally; all main local and multinational banks have presence in Karen; they include; Absa Bank (Barclays), Standard Chartered Bank, Kenya Commercial Bank, Cooperative Bank, Diamond Trust Bank, Equity Bank, Spire Bank, Family Bank, ABC Bank, NCBA Bank (NIC Bank &amp; Commercial Bank of Africa among others).
+</p></blockquote>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1606814496968-2b4785dd-97d9" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1606814496968-2b4785dd-97d9" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Major Hospitals in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>The Nairobi Hospital at the Galerial Mall</li>
+<li>The Karen Hospital</li>
+<li>The Mater Hospital at the Well Karen</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div></section><section class="vc_section"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h1 style="text-align: center;font-family:Ubuntu;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1608361423144" >RUNDA</h1></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><img loading="lazy" class="alignnone wp-image-1880 size-full" src="images/runda-1.jpg" alt="" width="741" height="359" srcset="images/runda-1.jpg 741w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/12/runda-1-300x145.jpg 300w" sizes="(max-width: 741px) 100vw, 741px" />The name RUNDA was coined from an abbreviation to mean &#8220;Reserved United Nations Development Area&#8221;. It is one of the suburbs of the city of Nairobi, the capital and largest city in Kenya. It is generally regarded as one of the richest suburbs in Kenya. It is bounded by Limuru Road to the west, Ruaka Road to the south, Kiambu Road to the east, and coffee plantations to the north. The area encompasses Closeburn Estate, Mimosa and Old Runda to the west, Mumwe and Whispers to the south, and New Runda and Muringa to the east.<br />
+Occupied by mainly wealthy families and expats (mostly Europeans), the area is defined by big beautiful, palatial homes, well-trimmed fences, high-end malls, restaurants, and schools.<br />
+Runda is another leafy suburb in Nairobi. The name RUNDA was coined from an abbreviation to mean &#8220;Reserved United Nations Development Area&#8221;. Situated in between Limuru Road to the west, Ruaka Road to the south, Kiambu Road to the east, and coffee plantations to the north. The area encompasses Closeburn Estate, Mimosa and Old Runda to the west, Mumwe and Whispers to the south, New Runda and Muringa to the east.<br />
+It is home to some of the top Kenyan government officials, international agencies heads, and ambassadors. Also defined by big beautiful palatial homes as Karen, the suburb is exclusive to only those wishing to build homes, and does not allow for the construction of apartments.<br />
+It is a quiet and serene space for families, defined by well-manicured gardens and clean well-maintained streets, so would be a good choice if you are relocating to Nairobi with family for a longer period.<br />
+There are also a number of international schools in the area and its surroundings and some of the popular malls. Runda boasts of a vry strong presence of the most established level V hospitals in Kenya.<br />
+Runda is served by the United Nations Environment Police Post and the Gigiri Police station.<br />
+The population here also includes a majority of expatriates especially because the area is close to the United Nations headquarters in Nairobi, a number of Foreign Missions, and international schools.</p>
+<p><strong>Key information</strong></p>
+<p>Distance from City Centre: 3 Kilometres</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-pink vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1607615368650-910b588c-589e" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607615368650-910b588c-589e" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Shopping Malls in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Runda Shopping Centre</li>
+<li>Ciata City Mall, Ridgeways</li>
+<li>Rosslyn Riviera Mall</li>
+<li>Two Rivers Mall</li>
+<li>Ridgeways Mall</li>
+<li>The Village Market</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1608303720418-a4a18b99-ec02" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1608303720418-a4a18b99-ec02" data-vc-accordion data-vc-container=".vc_tta-container"><i class="vc_tta-icon fas fa-truck"></i><span class="vc_tta-title-text">Best Movers in Runda</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><span style="color: #000000;">Packers and movers Kenya limited offer:-</span></p>
+<ul>
+<li><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/"><span style="color: #000000;">Domestic House Shifting</span></a></li>
+<li><a href="https://packersandmoversltd.co.ke/office-relocations/"><span style="color: #000000;">Office Relocations</span></a></li>
+<li><span style="color: #000000;">Settling in Services</span></li>
+<li><a href="https://packersandmoversltd.co.ke/cross-border-moves/"><span style="color: #000000;">Cross border moves</span></a></li>
+<li><a href="https://packersandmoversltd.co.ke/international-relocation/"><span style="color: #000000;">International Relocation</span></a></li>
+<li><a href="https://packersandmoversltd.co.ke/storage/"><span style="color: #000000;">Storage</span></a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607615368677-3ccbf264-84b2" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607615368677-3ccbf264-84b2" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Schools in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>SABIS International School Runda</li>
+<li>Potterhouse School and Kindergarten</li>
+<li>Regis School Runda</li>
+<li>Brookhouse School Runda</li>
+<li>St Marys Girls School, Runda</li>
+<li>Rosslyn Academy</li>
+<li>Braeburn Garden Estate School</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607615368701-dc5275b7-8a7e" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607615368701-dc5275b7-8a7e" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Worship places in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>PEFA Runda</li>
+<li>Fountain Gate Church</li>
+<li>PCEA Evergreen Church</li>
+<li>Our Lady of the Rosary Catholic Church</li>
+<li>United for Christ Revival Ministries</li>
+<li>Ridgeways Baptist Church</li>
+<li>PCEA</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607615368729-9e660ebd-ee62" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607615368729-9e660ebd-ee62" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Access to Airports</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Wilson Airport &#8211; 16 Kilometers</li>
+<li>JKIA &#8211; 30 Kilometers</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607615368754-64844cfa-387f" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607615368754-64844cfa-387f" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Recreation facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Vester Gardens</li>
+<li>Kencom Homes Swimming Pool</li>
+<li>Runners Paradise Safaris Ltd</li>
+<li>Rosslyn Academy Soccer Field</li>
+<li>Rosslyn Ridge Basketball Court</li>
+<li>Ozone Trampoline Park</li>
+<li>The Village Market</li>
+<li>Runda Road Gate 43</li>
+<li>Under the SeVillage Bowl</li>
+<li>Truth Safaris</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607615368783-d11241ec-d1b7" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607615368783-d11241ec-d1b7" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Banking facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<blockquote>
+<ul>
+<li>Prime Bank</li>
+<li>Stanbic Bank</li>
+<li>Diamond Trust Bank</li>
+<li>SBM Bank &#8211; Village Market Branch</li>
+<li>NCBA Bank Ridgeways</li>
+<li>National Bank-Kiambu</li>
+</ul>
+</blockquote>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607615368809-154336ef-8de8" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607615368809-154336ef-8de8" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Major Hospitals in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>M.P. Shah Hospital,</li>
+<li>Village Medical Centre</li>
+<li>Agakhan Hospital-Ridgeways</li>
+<li>Runda Baptist Clinic (Gertrude’s</li>
+<li>Gynaecology Centre Nairobi</li>
+<li>Radiant Group of Hospitals Ltd (Kiambu)</li>
+<li>The Tenwek Hospital</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h1 style="text-align: center;font-family:Ubuntu;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1608305790771" >WESTLANDS</h1></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><img loading="lazy" class="alignnone size-full wp-image-1879" src="images/WESTLANDSB.jpg" alt="" width="753" height="375" srcset="images/WESTLANDSB.jpg 753w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/12/WESTLANDSB-300x149.jpg 300w" sizes="(max-width: 753px) 100vw, 753px" />Westlands is an affluent, mixed-use commercial and residential neighbourhood in Nairobi, the capital city of Kenya. Westlands is also one of the eight administrative divisions of Nairobi County, which is coterminous with Nairobi City.<br />
+Westlands is popular with young professionals and business people as compared to other established estates like say; Muthaiga, Runda or even Karen.<br />
+It is therefore one of the homes of exclusive night life where you will find many high-end restaurants and popular nightclubs in Nairobi, it is always very lively, making it a favourite with many people. It is also the home of the Nairobi National Museum</p>
+<p>Westlands is located approximately 4 kilometres (5 minutes), by road, northwest of the central business district of Nairobi. It was a residential district during the colonial period which ended in 1963. Then, it housed mainly Kenyan Asians of Indian descent.</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-pink vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1607652512384-45a90eeb-94c7" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607652512384-45a90eeb-94c7" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Shopping Malls in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>The Sarit Centre Shopping Mall</li>
+<li>The Ukay Shopping Mall</li>
+<li>The Westgate Shopping Mall</li>
+<li>The Mall- Parklands</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1608305082631-b0be84c9-270c" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1608305082631-b0be84c9-270c" data-vc-accordion data-vc-container=".vc_tta-container"><i class="vc_tta-icon fas fa-truck"></i><span class="vc_tta-title-text">Top Movers in Westlands</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><span style="color: #000000;">Packers and movers Kenya limited offer:-</span></p>
+<ul>
+<li><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/"><span style="color: #000000;">Domestic House Shifting</span></a></li>
+<li><a href="https://packersandmoversltd.co.ke/office-relocations/"><span style="color: #000000;">Office Relocations</span></a></li>
+<li><span style="color: #000000;">Settling in Services</span></li>
+<li><a href="https://packersandmoversltd.co.ke/cross-border-moves/"><span style="color: #000000;">Cross border moves</span></a></li>
+<li><a href="https://packersandmoversltd.co.ke/international-relocation/"><span style="color: #000000;">International Relocation</span></a></li>
+<li><a href="https://packersandmoversltd.co.ke/storage/"><span style="color: #000000;">Storage</span></a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607652512417-e8bdf322-a12c" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607652512417-e8bdf322-a12c" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Education Facilities in the Neighborhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>The Aga Khan High School</li>
+<li>Westland primary school</li>
+<li>Bohra Primary School</li>
+<li>Nairobi Primary School</li>
+<li>International School of Kenya</li>
+<li>Graffins College Westland Campus</li>
+<li>Australian Studies Institute AUSI</li>
+<li>DALC Education Westlands Campus</li>
+<li>Kenya School of Revenue Administration</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607652512449-091a19a4-2b2a" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607652512449-091a19a4-2b2a" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Worship places in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Passion For Christ Covenant Ministry/Kenya</li>
+<li>Parkie Youth Ministry</li>
+<li>St Austins Catholic Parish Youth Group</li>
+<li>Christ Embassy Church Westlands</li>
+<li>House of prayer shield of faith Christian fellowship</li>
+<li>Jesus is Real Productions (J-R)</li>
+<li>BAPS Shri Swaminarayan Mandir</li>
+<li>Message of JESUS Christ Church.</li>
+<li>Westlands Mosque مسجد</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607652512484-168ae467-3e82" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607652512484-168ae467-3e82" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Access to Airports</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>JKIA – 28 Kilometres</li>
+<li>Wilson Airport- 8 Kilometres</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607652512518-b5dbedaa-14ed" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607652512518-b5dbedaa-14ed" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Recreation facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Villa Rosa Kempinski Nairobi</li>
+<li>Westland Recreation Centre</li>
+<li>Parklands Sports Club</li>
+<li>Racing Sport GYM Westlands</li>
+<li>The Snake Park</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607652512555-934c60cb-702b" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607652512555-934c60cb-702b" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Banking facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Prime Bank ATM- Westlands</li>
+<li>Equity Bank-Westlands</li>
+<li>Family Bank-Westlands</li>
+<li>Standard Chartered Bank</li>
+<li>NCBA Westlands Branch-(ATM)</li>
+<li>Fidelity Bank Westlands</li>
+<li>National Bank-Westlands</li>
+<li>KCB Kenya LTD</li>
+<li>Imperial Bank LTD, Head Office</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607652512585-efc37c75-06ff" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607652512585-efc37c75-06ff" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Major Hospitals in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>The M.P Shah Hospital</li>
+<li>The Matter Hospital (Westlands)</li>
+<li>Chiromo Lane Medical Centre</li>
+<li>Bliss Medical Centre Westlands</li>
+<li>Westalnds Physiotherapy Clinic</li>
+<li>Avenue Hospital Nairobi (westlands)</li>
+<li>Kijabe Hospital Westlands</li>
+<li>Westlands Health Centre</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div></section><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h1 style="text-align: center;font-family:Ubuntu;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1608305885754" >KITISURU</h1></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><img loading="lazy" class="alignnone size-full wp-image-1882" src="images/kitusuri.jpg" alt="" width="689" height="384" srcset="images/kitusuri.jpg 689w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/12/kitusuri-300x167.jpg 300w" sizes="(max-width: 689px) 100vw, 689px" />Kitisuru is a suburb of Nairobi located approximately 10 kilometres from the CBD, the capital city and one of the largest and most exclusive metropolitan area in Kenya. The name Kitisuru comes from a nearby river &#8220;Gìtathurù&#8221; which was borrowed from the original inhabitants of the area who were mainly of the Kikuyu dialect. Kitisuru is mainly served by Kyuna, Ngecha, and the lower Kabete roads.</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-pink vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1607653741401-fa42c974-f6d4" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607653741401-fa42c974-f6d4" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Shopping Malls in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li> Kitisuru Place _ Urban</li>
+<li>Gigiri Shopping Centre</li>
+<li>Runda Shopping Centre</li>
+<li>New Muthaiga Shopping Mall</li>
+<li>Two Rivers Mall</li>
+<li>Ciata City Mall, Ridgeways</li>
+<li>Gigiri Box Park</li>
+<li>The Village Market</li>
+<li>Rosslyn Riviera Mall</li>
+<li>Warwick Plaza</li>
+<li>Total New Kitisuru Station Shop</li>
+<li>The Crash Site-Village Market</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1608305931976-cf33068e-a771" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1608305931976-cf33068e-a771" data-vc-accordion data-vc-container=".vc_tta-container"><i class="vc_tta-icon fas fa-truck"></i><span class="vc_tta-title-text">Best Movers in Kitusuru</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>Packers and movers Kenya limited offer:-</p>
+<ul>
+<li><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/">Domestic House Shifting</a></li>
+<li><a href="https://packersandmoversltd.co.ke/office-relocations/">Office Relocations</a></li>
+<li>Settling in Services</li>
+<li><a href="https://packersandmoversltd.co.ke/cross-border-moves/">Cross border moves</a></li>
+<li><a href="https://packersandmoversltd.co.ke/international-relocation/">International Relocation</a></li>
+<li><a href="https://packersandmoversltd.co.ke/storage/">Storage</a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607653741444-457c8fcc-b82c" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607653741444-457c8fcc-b82c" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Education Facilities in the Neighborhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>School of the Nations</li>
+<li>Starkid School &amp; Rescue Centre</li>
+<li>SABIS International School</li>
+<li>Rosslyn Academy</li>
+<li>International School of Kenya</li>
+<li>Dukes-Bridge Kitisuru</li>
+<li>Regis School Runda</li>
+<li>Gigiri Montessori House</li>
+<li>German School Nairobi</li>
+<li>Kabete International School</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607653741495-54cab740-8c90" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607653741495-54cab740-8c90" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Worship places in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Jamia Mosque</li>
+<li>Apostles Of Jesus Generalate</li>
+<li>Renewal Church Nairobi</li>
+<li>Victory Faith Church</li>
+<li>Mount Zion Worship Sanctuary</li>
+<li>Redeemed Gospel Church</li>
+<li>Karura Community Chapel</li>
+<li>St. Catherine of Siena Catholic Church</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607653741536-6a1ec046-196a" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607653741536-6a1ec046-196a" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Access to Airports</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li> Wilson Airport: 19 Kilometres</li>
+<li>JKIA Airport: 29 Kilometres</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607653741584-aa40a9f1-f939" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607653741584-aa40a9f1-f939" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Recreation facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>UN Recreational Centre</li>
+<li>Revitalize Wellness Center</li>
+<li>Ozone Trampoline Park</li>
+<li>DeepsEA Horse Riding School</li>
+<li>Kitisuru Manor</li>
+<li>Kitisuru Health Club and Spa</li>
+<li>Two Rivers Theme Park</li>
+<li>New Muthaiga Horse Riding Stables</li>
+<li>Serenity Spa Kitisuru</li>
+<li>Ridgeville Resort and Conference Center</li>
+<li>The Village Market</li>
+<li>Serenity Spa Gigiri</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607653741646-bf694bd8-de0a" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607653741646-bf694bd8-de0a" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Banking facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Fidelity Bank New Muthaiga Branch</li>
+<li>National Bank</li>
+<li>Equity Bank Gigiri Square</li>
+<li>CFC Stanbic bank-warwick/gigiri</li>
+<li>NCBA Ciata Mall &#8211; (ATM)</li>
+<li>I &amp; m bank ATM-Gigiri branch</li>
+<li>Kenya Commercial Bank</li>
+<li>Family bank ATM &#8211; Limuru rd.,</li>
+<li>NCBA Two Rivers &#8211; (ATM)</li>
+<li>NCBA Village Market 2 &#8211; (ATM)</li>
+<li>KCB Bank &#8211; Gigiri Square</li>
+<li>Standard Chartered Bank Two Rivers Branch</li>
+<li>SBM Bank &#8211; Village Market Branch</li>
+<li>KCB ATM</li>
+<li>Diamond Trust Bank</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607653741695-636393d5-35dd" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607653741695-636393d5-35dd" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Major Hospitals in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>The Nairobi Hospital Outpatient Centre</li>
+<li>Oasis Health Specialty Hospital</li>
+<li>M.P. Shah Hospital, Village Medical Centre|</li>
+<li>Coptic Hospital-Main Hospital</li>
+<li>Avenue Hospital Nairobi</li>
+<li>The Aga Khan University Hospital</li>
+<li>Mater Misericordiae Hospital,</li>
+<li>Aga Khan University Hospital Medical Centre</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h1 style="text-align: center;font-family:Ubuntu;font-weight:400;font-style:normal" class="vc_custom_heading" >MUTHAIGA</h1></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><img loading="lazy" class="alignnone size-full wp-image-1885" src="images/muthaiga.jpg" alt="" width="687" height="382" srcset="images/muthaiga.jpg 687w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/12/muthaiga-300x167.jpg 300w" sizes="(max-width: 687px) 100vw, 687px" />Muthaiga is located approximately 7 kilometers (4 minutes) from the CBD. The neighborhood is predominantly residential, with meticulously manicured lawns surrounding resort-style mansions, sitting on parcels of real estate measuring one acre or larger. Several prominent individuals have their residence in Muthaiga.</p>
+<p>Muthaiga is characterized by small roads getting into the gated estate with 24-hour security staff. You therefore need to know exactly where you are going to get access into the estate.<br />
+The area is also close to many embassies including the Embassy of Turkey, the Ukraine Embassy, the Algerian Embassy, the Belgian Embassy, and the Canadian Embassy, among many others. It as well boasts to host residences of several Ambassadors and high Commissioners.<br />
+It enjoys a serene climate courtesy of the Karura forest.<br />
+There is also a country club-the Muthaiga Country Club that is popular with the residents here and from surrounding estates including Runda and Gigiri. The Club offers sports and recreational facilities.</p>
+<p>Distance from city centre: 6 Kilometres.</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-pink vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1607654583639-d58eb85a-daa8" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607654583639-d58eb85a-daa8" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Shopping Malls in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>New Muthaiga Shopping Mall</li>
+<li>Muthaiga Square Nairobi</li>
+<li>Mobil Plaza</li>
+<li>Valley View Plaza</li>
+<li>Gigiri Shopping Centre</li>
+<li>Flame Tree Park Mall</li>
+<li>Vegetable and fruit</li>
+<li>Regal Plaza</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607654583702-140a5758-c5cc" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607654583702-140a5758-c5cc" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Schools in the Neighborhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Muthaiga Primary School</li>
+<li>The Vale School Muthaiga</li>
+<li>Premier Academy</li>
+<li>Muthaiga Kindergarten</li>
+<li>North Highridge Primary School</li>
+<li>Royal Montessori</li>
+<li>Indian Public School</li>
+<li>Taaleemul Islaam Academy</li>
+<li>Step International Academy</li>
+<li>Mt. Longonot Schools</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1608305935772-6f36910a-8a97" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1608305935772-6f36910a-8a97" data-vc-accordion data-vc-container=".vc_tta-container"><i class="vc_tta-icon fas fa-truck"></i><span class="vc_tta-title-text">Best Movers in Muthaiga</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>Packers and movers Kenya limited offer:-</p>
+<ul>
+<li><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/">Domestic House Shifting</a></li>
+<li><a href="https://packersandmoversltd.co.ke/office-relocations/">Office Relocations</a></li>
+<li>Settling in Services</li>
+<li><a href="https://packersandmoversltd.co.ke/cross-border-moves/">Cross border moves</a></li>
+<li><a href="https://packersandmoversltd.co.ke/international-relocation/">International Relocation</a></li>
+<li><a href="https://packersandmoversltd.co.ke/storage/">Storage</a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607654583765-840d6c7f-a74b" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607654583765-840d6c7f-a74b" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Worship places in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Hindu Holy Temple</li>
+<li>ACK city park church</li>
+<li>Berean inspiration church</li>
+<li>Life Mission Christian Centre</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607654583815-6e9d9ce7-8618" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607654583815-6e9d9ce7-8618" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Access to Airports</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Wilson Airport- 11Kilometres</li>
+<li>JKIA &#8211; 22 Kilometers</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607654583874-fb4ae5fb-4224" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607654583874-fb4ae5fb-4224" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Recreation facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Sangrila</li>
+<li>Muthaiga Country Club</li>
+<li>Muthaiga Golf Course</li>
+<li>RacingSportGym Parklands</li>
+<li>City Park Arena</li>
+<li>Premier Club Swimming Pool</li>
+<li>Premier Club Cricket Ground</li>
+<li>Nairobi Gymkhana</li>
+<li>Vraj Ganga</li>
+<li>Commonwealth War Graves</li>
+<li>City park hockey stadium</li>
+<li>Lemon lounge</li>
+<li>Khweza Foods</li>
+<li>Evergreen Park</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607654583940-1e7883a7-9297" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607654583940-1e7883a7-9297" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Banking facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Standard Chartered Bank Muthaiga</li>
+<li>Absa | Branch | Muthaiga</li>
+<li>NCBA Parklands</li>
+<li>Equity Bank Agent</li>
+<li>Absa | ATM | Thigiri</li>
+<li>Diamond Trust Bank-parklands</li>
+<li>Credit Bank- Westlands Branch</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607654583995-55bac7c0-47e3" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607654583995-55bac7c0-47e3" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Health facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Muthaiga Pediatrics</li>
+<li>Gertrude&#8217;s Children&#8217;s Hospital</li>
+<li>Humming Health Medical Facility</li>
+<li>Karura Health Centre (Kiambu Rd)</li>
+<li>Apples and Sense</li>
+<li>Sunshine Medical Diagnostic Centre</li>
+<li>Stratus Medical Imaging Solutions</li>
+<li>Shepherds Hospital &#8211; Parklands</li>
+<li>Specialists&#8217; Centre</li>
+<li>Harley Street Fertility Center &#8211; Nairobi</li>
+<li>Consolata Shrine Dispensary.</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h1 style="text-align: center;font-family:Ubuntu;font-weight:400;font-style:normal" class="vc_custom_heading" >LAVINGTON</h1></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><img loading="lazy" class="alignnone wp-image-1917 size-full" src="images/lavington-1.jpg" alt="" width="673" height="386" srcset="images/lavington-1.jpg 673w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/12/lavington-1-300x172.jpg 300w" sizes="(max-width: 673px) 100vw, 673px" />Lavington is major apex middle class suburb of Nairobi approximately 8 Kilometres from the CBD, Kenya. It is a high-income residential estate located northwest of the city Centre. Lavington belongs to the Westlands administrative division of Nairobi. It is defined by beautiful villas and mansions, providing homes to the high income earners in Nairobi.</p>
+<p>&nbsp;</p>
+<p>Distance from City Centre: 8 Kilometers</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-pink vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1607655425829-263bb521-92a5" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607655425829-263bb521-92a5" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Shopping Malls in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Lavington Mall</li>
+<li>Lavington Curve</li>
+<li>Kasuku Center</li>
+<li>Fedha Valley Arcade Shopping Mall</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607655425900-fc720c5c-8552" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607655425900-fc720c5c-8552" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Schools in the Neighborhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Braeside School</li>
+<li>Nairobi International School</li>
+<li>Saint Austin&#8217;s Academy-Senior School</li>
+<li>Lavington Kindergarten</li>
+<li>Rusinga School Nairobi</li>
+<li>Muthangari International School</li>
+<li>Lavington Primary School</li>
+<li>Braeburn Schools</li>
+<li>Lavington Secondary School</li>
+<li>Rudan Junior Academy</li>
+<li>Lavington United Church Academy</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1608306179241-8abb96fe-56fd" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1608306179241-8abb96fe-56fd" data-vc-accordion data-vc-container=".vc_tta-container"><i class="vc_tta-icon fas fa-truck"></i><span class="vc_tta-title-text">Top movers in Lavington</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>Packers and movers Kenya limited offer:-</p>
+<ul>
+<li><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/">Domestic House Shifting</a></li>
+<li><a href="https://packersandmoversltd.co.ke/office-relocations/">Office Relocations</a></li>
+<li>Settling in Services</li>
+<li><a href="https://packersandmoversltd.co.ke/cross-border-moves/">Cross border moves</a></li>
+<li><a href="https://packersandmoversltd.co.ke/international-relocation/">International Relocation</a></li>
+<li><a href="https://packersandmoversltd.co.ke/storage/">Storage</a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607655425967-13f6f4ea-72d8" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607655425967-13f6f4ea-72d8" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Worship places in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Lavington United Church</li>
+<li>Gospel Outreach Church</li>
+<li>Nairobi Chapel Lavington</li>
+<li>Lavington Vineyard Church</li>
+<li>Hope Church Lavington</li>
+<li>Seventh Day Adventist Church Lavington</li>
+<li>Deliverance Church Amboseli-lavington</li>
+<li>Methodist Church of Kenya Nairobi</li>
+<li>Kings Outreach Church Lavington Altar</li>
+<li>Gatina United Church</li>
+<li>Holy Cross Catholic Church</li>
+<li>Lavington SDA Church</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607655426038-31eb6405-213f" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607655426038-31eb6405-213f" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Access to Airports</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Wilson Airport – 12 Kilometres</li>
+<li>JKIA – 21 Kilometres</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607655426109-bb921b23-2ee6" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607655426109-bb921b23-2ee6" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Recreation facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Kengele&#8217;s Lavington Green</li>
+<li>Mambo Italia Lavington</li>
+<li>La Tasca</li>
+<li>GOSIP UltraLounge</li>
+<li>PolyCare Wellness Centre</li>
+<li>TipwaTipwa</li>
+<li>Lavington Tennis Court</li>
+<li>Dance Centre Kenya</li>
+<li>Jafferys Sports Club</li>
+<li>Lenana House Conference Center</li>
+<li>Sub-Zone Lavington Wazi WiFi Hotspot</li>
+<li>Bikram Yoga Nairobi<br />
+AVFitness Kenya</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607655426179-cfb0f333-2231" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607655426179-cfb0f333-2231" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Banking facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Equity Bank Lavington</li>
+<li>Chase Bank, Lavington Branch</li>
+<li>Diamond trust bank Lavington branch</li>
+<li>Standard Chartered Bank Lavington Mall</li>
+<li>Absa | Branch | Lavington Green</li>
+<li>KCB ATM</li>
+<li>Absa | ATM | Lavington Green</li>
+<li>NIC Bank</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607655426255-f676b2b0-5ba4" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607655426255-f676b2b0-5ba4" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Health facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Maria Immaculate Hospital</li>
+<li>Lavington Pediatrics</li>
+<li>Gertrudes Children’s Hospital-Lavington</li>
+<li>Chiromo Mental Health Hospital</li>
+<li>Agha Khan University Hospital Valley Arcade Medical Centre</li>
+<li>Melchizedek Hospital</li>
+<li>Healthcare, Lavington Clinic</li>
+<li>AAR Healthcare, Lavington Clinic.</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h1 style="text-align: center;font-family:Ubuntu;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1608306256994" >KILIMANI</h1></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><img loading="lazy" class="alignnone size-full wp-image-1888" src="images/kilimani.jpg" alt="" width="733" height="380" srcset="images/kilimani.jpg 733w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/12/kilimani-300x156.jpg 300w" sizes="(max-width: 733px) 100vw, 733px" />Kilimani is located approximately 5 kilometers west of Nairobi&#8217;s central business district. It is high-density mixed residential and commercial; both retail and offices. State House Nairobi, the official residence of the President of Kenya is located in Kilimani, on State House Road.<br />
+It houses a big number of the young Kenyan middle to upper-class group of people, with young or no families.<br />
+Residents include nationals from other African countries especially west Africans and Ethiopians. European expatriates and the Chinese can also be found here.<br />
+Yaya centre, one of Nairobi’s popular malls is located in the area. It is also home to some international schools and famous Kenyan schools.<br />
+Kilimani has one of the most exciting nightlife’s in Nairobi boasting to host a number of hot flame night clubs; Some of the top nightclubs in Nairobi include; Kiza, Billionaires, Casablanca, Caledonia etc.</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-pink vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1607656143923-a38c1f81-8c59" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656143923-a38c1f81-8c59" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Shopping Malls in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Yaya Centre</li>
+<li>Kilimani Mall</li>
+<li>Adlife Plaza</li>
+<li>Malls Guide Africa</li>
+<li>Woodlands Mall</li>
+<li>Remax Shopping Mall</li>
+<li>53 Park Arcade Kilimani</li>
+<li>REHEMA PLACE MALL 66</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656144003-b91e8f07-25bf" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656144003-b91e8f07-25bf" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Schools in the Neighborhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Kilimani Primary School</li>
+<li>Logos Christian School</li>
+<li>Kilimani International School</li>
+<li>Appleton Kindergarten and Montessori School</li>
+<li>State House Primary School</li>
+<li>State House Girls High School</li>
+<li>Cavina School</li>
+<li>Logos Christian School Nairobi Chapel</li>
+<li>Light International School Kindergarten Nairobi</li>
+<li>Surina International Montessori Schools</li>
+<li>Makini Junior Academy and College</li>
+<li>Compuera Academy</li>
+<li>Nairobi International School (Senior School)</li>
+<li>Kiota School Kindergarten</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1608306260277-8d9b2e2b-998d" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1608306260277-8d9b2e2b-998d" data-vc-accordion data-vc-container=".vc_tta-container"><i class="vc_tta-icon fas fa-truck"></i><span class="vc_tta-title-text">Best Movers in Kilimani</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>Packers and movers Kenya limited offer:-</p>
+<ul>
+<li><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/">Domestic House Shifting</a></li>
+<li><a href="https://packersandmoversltd.co.ke/office-relocations/">Office Relocations</a></li>
+<li>Settling in Services</li>
+<li><a href="https://packersandmoversltd.co.ke/cross-border-moves/">Cross border moves</a></li>
+<li><a href="https://packersandmoversltd.co.ke/international-relocation/">International Relocation</a></li>
+<li><a href="https://packersandmoversltd.co.ke/storage/">Storage</a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656144080-b7da514b-4179" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656144080-b7da514b-4179" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Worship places in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>AIC Ngong Road</li>
+<li>AIC Milimani, Nairobi KE</li>
+<li>Mamlaka Hill Chapel</li>
+<li>Biblica Kenya-Dennis Pritt</li>
+<li>Kings Outreach Ministries Yaya Alta</li>
+<li>Christ is the Answer Ministries (CITAM)</li>
+<li>Central Church of the Nazarene</li>
+<li>The Ministry of Repentance and Holiness</li>
+<li>Central Park Nairobi</li>
+<li>Mamlaka Hill Chapel</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656144162-4b0cc58e-2c3c" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656144162-4b0cc58e-2c3c" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Access to Airports</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Wilson Airport 8 Kilometers</li>
+<li>JKIA -21 Kilometers</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656144246-5d2feab8-aec8" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656144246-5d2feab8-aec8" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Recreation facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>YAYA CENTER SWIMING POOL</li>
+<li>MF42</li>
+<li>Ndemi Place Guesthouse Swimming Pool</li>
+<li>Centres for international programs – Kenya</li>
+<li>State House Sports Ground</li>
+<li>Wentworth Gym</li>
+<li>St. Georges Basketball Court</li>
+<li>JD Tennis ACADEMY</li>
+<li>The Nairobi Club Swimming Pool</li>
+<li>Uhuru Gardens</li>
+<li>Bucketlist Adventures</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656144340-1151b140-8274" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656144340-1151b140-8274" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Banking facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Family Bank- Kilimani</li>
+<li>Equity Bank</li>
+<li>Prime Bank</li>
+<li>Bank of Africa &#8211; Kenya</li>
+<li>SBM Bank &#8211; Hurlingham Branch</li>
+<li>National Bank of Kenya</li>
+<li>Fidelity Bank-Kilimani</li>
+<li>NCBA Kilimani</li>
+<li>Spire Bank- Hurlingham</li>
+<li>Standard Chartered Bank Barclays Bank (Hurlingham Branch)</li>
+<li>NCBA Kilimani &#8211; (ATM)</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656144420-d2bc4b7c-1715" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656144420-d2bc4b7c-1715" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Health facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Kilimani Children&#8217;s Clinic</li>
+<li>Coptic Hospital-Main Hospital</li>
+<li>Menelik Medical Centre</li>
+<li>Garden Specialist Hospital</li>
+<li>Nairobi hospital</li>
+<li>Lifecare Hospitals Kenya</li>
+<li>Trinity Care Center</li>
+<li>The Nairobi Hospital Anderson Medical Center</li>
+<li>The Nairobi Womens Hospital-Hurlingham</li>
+<li>Nairobi Radiotherapy &amp; Cancer Centre</li>
+<li>National Spinal Injury Hospital</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h1 style="text-align: center;font-family:Ubuntu;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1608359828141" >LANGATA</h1></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><img loading="lazy" class="alignnone size-full wp-image-1890" src="images/langata.jpg" alt="" width="710" height="400" srcset="images/langata.jpg 710w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/12/langata-300x169.jpg 300w" sizes="(max-width: 710px) 100vw, 710px" />Lang&#8217;ata is a predominantly middle-class residential suburb of Nairobi in Kenya. The suburb consists of many smaller housing developments, referred to as estates. They include Nairobi Dam, Otiende, Southlands, Ngei, Jambo estate, Onyonka, Madaraka Estate, Kutch Prant, Rubia, NHC Langata, Akiba, Sun Valley, Royal Park and many others. These developments are primarily maisonettes or apartment blocks</p>
+<p>Lang&#8217;ata lies southwest of the city&#8217;s central business district, east of Karen, approximately 18 kilometres (11 mi), by road, from the centre of Nairobi. It lies mainly along the similarly named Langata Road, which runs from the Mombasa Road junction at Nyayo Stadium to Karen Shopping Centre, at the Ngong Road junction.<br />
+Shopping Malls<br />
+Due to its proximity to Karen; major shopping malls situated at Karen are just 5 minutes’ drive.</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-pink vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1607656965999-74642fc3-8deb" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656965999-74642fc3-8deb" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Shopping Malls in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Langata Shopping Center</li>
+<li>The Langata Heights.</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656966082-8149251f-f455" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656966082-8149251f-f455" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Schools in the Neighborhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Strathmore University</li>
+<li>The Nairobi Japanese School</li>
+<li>Catholic University of Eastern Africa</li>
+<li>Sunshine Secondary School</li>
+<li>AMREF International University</li>
+<li>Langata West Primary School</li>
+<li>Langata Road Primary School</li>
+<li>Uhuru Gardens Primary School</li>
+<li>Ngei Primary School</li>
+<li>Briar Rose Academy</li>
+<li>PCEA Langata Junior School</li>
+<li>Langata High School,</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656966160-a2a4678a-0f75" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656966160-a2a4678a-0f75" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Worship places in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Shrine of The Sacred Heart of Jesus Sisters of the Immaculate Heart of Mary</li>
+<li>Deliverance Church</li>
+<li>Nairobi Chapel</li>
+<li>Friends Church (Quakers)</li>
+<li>AIC Langata</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656966252-ab634e1e-ac1e" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656966252-ab634e1e-ac1e" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Access to Airports</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Wilson Airport – 4 Kilometres</li>
+<li>JKIA-26 Kilometres</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656966338-2bfbd29f-1587" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656966338-2bfbd29f-1587" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Recreation facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Nairobi National</li>
+<li>Bomas Centre</li>
+<li>Giraffe Centre</li>
+<li>Elephant Orphanage</li>
+<li>GP karting</li>
+<li>Uhuru Gardens</li>
+<li>1824 Club</li>
+<li>Carnivore Restaurant</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656966423-26e181ad-899c" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656966423-26e181ad-899c" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Banking facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Standard Chartered Bank-Langata Branch</li>
+<li>Equity Bank</li>
+<li>I&amp;M Bank Langata</li>
+<li>Family Bank</li>
+<li>Chase Bank</li>
+<li>KCB</li>
+<li>Diamond Trust Bank</li>
+<li>Cooperative Bank</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607656966507-f81d1a3b-17de" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607656966507-f81d1a3b-17de" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Health facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>St. Mary hospital</li>
+<li>Avenue Health Centre</li>
+<li>Langata Hospital</li>
+<li>The Nairobi West Hospital</li>
+<li>Mbagathi District Hospital</li>
+<li>Kenyatta National Hospital</li>
+<li>The Nairobi Women’s Hospital-Hurlingham</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1608358312803-64a7f1cd-0e62" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1608358312803-64a7f1cd-0e62" data-vc-accordion data-vc-container=".vc_tta-container"><i class="vc_tta-icon fas fa-truck"></i><span class="vc_tta-title-text">Best Movers In Langata</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>Packers and movers Kenya limited offer:-</p>
+<ul>
+<li><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/">Domestic House Shifting</a></li>
+<li><a href="https://packersandmoversltd.co.ke/office-relocations/">Office Relocations</a></li>
+<li>Settling in Services</li>
+<li><a href="https://packersandmoversltd.co.ke/cross-border-moves/">Cross border moves</a></li>
+<li><a href="https://packersandmoversltd.co.ke/international-relocation/">International Relocation</a></li>
+<li><a href="https://packersandmoversltd.co.ke/storage/">Storage</a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h1 style="text-align: center;font-family:Ubuntu;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1608359849324" >KITENGELA</h1></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><img loading="lazy" class="alignnone size-full wp-image-1892" src="images/kitengela.jpg" alt="" width="721" height="440" srcset="images/kitengela.jpg 721w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/12/kitengela-300x183.jpg 300w" sizes="(max-width: 721px) 100vw, 721px" />Kitengela is one of the fastest growing urban areas of Kenya. The town has a wide variety of financial institutions and saccos (savings and credit cooperatives) that have flooded the town to finance the construction boom as well as cater to the soaring middle-class population. Kitengela&#8217;s gated communities for the middle classes include Chuna, Milimani, Royal Gates, New Valley, Muigai Prestige, New World Gardens, Safaricom 1 &amp; 2 estates, Police Sacco Estate, EPZ estate, Fountain View, Riverside, Upper Valley, Kenpipe Gardens and many more. These estates have seen an unprecedented boom due to the fact that most of them are controlled, not allowing unsightly flats or small businesses/kiosks within their gated walls. Chuna Estate, Royal Finesse and Royal Gates are considered among the best organised of them but many more are coming up each year. With the construction and completion of Isinya pipeline road, as well as the ongoing construction of the Mlolongo to Waiyaki Way expressway, as well as Konza City Metropolis nearby, Kitengela is poised to experience even more growth and development.</p>
+<p>Distance from City Centre: 30 Kilometres</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-pink vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1607658326538-d85623fb-a193" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607658326538-d85623fb-a193" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Shopping Malls in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Kitengela Mall</li>
+<li>Kitengela Capital Centre</li>
+<li>Brand Quarters Kitengela</li>
+<li>Nini Shopping Mall</li>
+<li>Naivas Supermarket</li>
+<li>Chairman mall</li>
+<li>Outlook Ltd BAT Distributor</li>
+<li>Buyer Best Home Appliance</li>
+<li>Virtual Systems</li>
+<li>Mardadi Shopping Centre</li>
+<li>Moran trade Centre</li>
+<li>Red Heron Centre</li>
+<li>Nalepo plaza</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607658326635-01e44580-cdf3" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607658326635-01e44580-cdf3" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Schools in the Neighborhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Kitengela International Schools</li>
+<li>Kitengela Muslim Girls High School</li>
+<li>Thorn Grove Schools</li>
+<li>Bridge International Academy &#8211; Kitengela</li>
+<li>KCA University-Kitengela Campus</li>
+<li>Kitengela Girls High School</li>
+<li>Sensei Institute of Technology-Kitengela</li>
+<li>Wates Music Concept</li>
+<li>The Stepping Stone elementary school</li>
+<li>Technology Development Center</li>
+<li>Path Hills Educational Centre</li>
+<li>The Orchard School Kitengela</li>
+<li>Chuna Preparatory School</li>
+<li>Bunny House School Primary Bunny House School Kindergarten</li>
+<li>Reliance Academy</li>
+<li>Noonkopir Girls High School, Kitengela</li>
+<li>Orchard school Kitengela</li>
+<li>White stars preparatory school</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607658326735-f6e137ee-7ac4" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607658326735-f6e137ee-7ac4" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Worship places in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Deliverance Church Kitengela</li>
+<li>ACK (Christ The King) Kitengela</li>
+<li>International Christian Centre Kitengela</li>
+<li>Jubilee Christian Church &#8211; Kitengela</li>
+<li>St Monica Catholic Church Noonkopir</li>
+<li>CITAM Athi River.</li>
+<li>Catholic Church</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1608358643574-8c6e5d37-dcc0" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1608358643574-8c6e5d37-dcc0" data-vc-accordion data-vc-container=".vc_tta-container"><i class="vc_tta-icon fas fa-truck"></i><span class="vc_tta-title-text">Best movers in Kitengela</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>Packers and movers Kenya limited offer:-</p>
+<ul>
+<li><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/">Domestic House Shifting</a></li>
+<li><a href="https://packersandmoversltd.co.ke/office-relocations/">Office Relocations</a></li>
+<li>Settling in Services</li>
+<li><a href="https://packersandmoversltd.co.ke/cross-border-moves/">Cross border moves</a></li>
+<li><a href="https://packersandmoversltd.co.ke/international-relocation/">International Relocation</a></li>
+<li><a href="https://packersandmoversltd.co.ke/storage/">Storage</a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607658326818-c29540bb-9155" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607658326818-c29540bb-9155" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Access to Airports</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Wilson Airport-30 Kilometres</li>
+<li>JKIA-23 Kilometres</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607658326907-9da4941a-a0f8" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607658326907-9da4941a-a0f8" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Recreation facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Kitengela conference and resort park</li>
+<li>GMC Funplace &#8211; Kitengela</li>
+<li>Sessa Youth &amp; Recreational Centre</li>
+<li>Pavilion XV Kitengela</li>
+<li>Grays Oak Hotel</li>
+<li>Galaxy pool</li>
+<li>The Mao grounds</li>
+<li>Mountain View Kitengela</li>
+<li>Bloxity East Africa Ltd</li>
+<li>Club Enkare</li>
+<li>Wrens lounge and Grill -Kitengela</li>
+<li>Galaxy Resort and Lounge</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607658326991-c7ebcb36-e765" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607658326991-c7ebcb36-e765" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Banking facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>National Bank-Kitengela</li>
+<li>Bank of Africa Kitengela Branch</li>
+<li>Equity bank ltd-kitengela</li>
+<li>Co &#8211; Operative Bank &#8211; Kitengela Branch</li>
+<li>KCB Kitengela</li>
+<li>Family Bank Kitengela</li>
+<li>Equity Bank Agent</li>
+<li>Faulu Bank</li>
+<li>NCBA Kitengela</li>
+<li>Bingwa Sacco Limited &#8211; Kitengela Branch</li>
+<li>Jitegemea Credit Scheme Kitengela Br.</li>
+<li>NIC bank &#8211; kitengela branch</li>
+<li>Standard Chartered Bank ATM</li>
+<li>Eco Bank</li>
+<li>KCB ATM</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607658327067-17ee423d-abe5" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607658327067-17ee423d-abe5" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Health facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Kitengela Medical Services</li>
+<li>Aga Khan University Hospital, Kitengela</li>
+<li>Kitengela Sub-County Hospital</li>
+<li>Batian Medical Centre</li>
+<li>AAR Healthcare, Kitengela Clinic</li>
+<li>Kitengela West Hospital</li>
+<li>Kitengela Health Centre</li>
+<li>FHOK-Family Care Medical Centre</li>
+<li>Karen Hospital- Kitengela</li>
+<li>Kitengela Pona Hospital</li>
+<li>St Paul&#8217;s Hospital</li>
+<li>Scan Lab Kitengela</li>
+<li>The Nairobi Womens Hospital-Kitengela</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h1 style="text-align: center;font-family:Ubuntu;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1608359889327" >BURUBURU</h1></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><img loading="lazy" class="alignnone size-full wp-image-1894" src="images/buruburu.jpg" alt="" width="723" height="403" srcset="images/buruburu.jpg 723w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/12/buruburu-300x167.jpg 300w" sizes="(max-width: 723px) 100vw, 723px" />Buruburu is located in the Eastlands part of Nairobi, Kenya, situated in Makadara Division. Buruburu is a large middle-class residential area. The initial estate was completed in 1982 being one of the most magnificent estates of the time. It was initially from Phase I to Phase V but later other estates like Pioneer and Buruburu Phase V extension were constructed later. It housed who has who in Kenya.</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-pink vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1607659401915-ec392d10-f63d" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607659401915-ec392d10-f63d" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Shopping Malls in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Buruburu 1 Shopping Centre</li>
+<li>The Point Mall Buruburu</li>
+<li>BuruBuru Shopping Centre</li>
+<li>Mungethio</li>
+<li>Mesora shoping center</li>
+<li>The point naivas buruburu hamza</li>
+<li>Outering Shoping Centre</li>
+<li>Millennium Place</li>
+<li>Makadara Shopping Center</li>
+<li>Superhouse Shopping Mall</li>
+<li>Eastgate mall</li>
+<li>Greenspan Mall</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607659402004-d282d070-2e14" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607659402004-d282d070-2e14" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Schools in the Neighborhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Bidii primary</li>
+<li>Harambee Estate Primary</li>
+<li>Rabai Road Primary</li>
+<li>Shepherds Junior School</li>
+<li>Wanja and Kim School</li>
+<li>Thomas Burke Primary School</li>
+<li>Happyland Primary School</li>
+<li>River Road Primary</li>
+<li>Buruburu One Primary</li>
+<li>SOS Primary School</li>
+<li>Buruburu Girls</li>
+<li>Npc Secondary School</li>
+<li>Buruburu High School</li>
+<li>Apostolic Carmel Girls&#8217; School</li>
+<li>East African school of Theology</li>
+<li>Institute of Advance Technology (IAT)</li>
+<li>Shepherds college</li>
+<li>Buruburu Institute of Fine Arts</li>
+<li>SOS Technical Institute</li>
+<li>Unity College</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607659402087-cef3b79b-08b4" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607659402087-cef3b79b-08b4" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Worship places in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Citam Buruburu</li>
+<li>Blessed Sacrament Catholic Church</li>
+<li>Community Centre Church Of God</li>
+<li>Buruburu Baptist Church</li>
+<li>A.C.K St. James Buruburu</li>
+<li>Holy Trinity Catholic Church</li>
+<li>Church Of Jesus Christ Of Latter-Day</li>
+<li>Buruburu Full Gospel Churches of Kenya</li>
+<li>East assembly (KAG) buruburu</li>
+<li>Nairobi Calvary Temple Buruburu</li>
+<li>BuruBuru 1 FGCK Royal family</li>
+<li>Deliverance Church Buruburu</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607659402178-a2d8d5db-d3e7" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607659402178-a2d8d5db-d3e7" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Access to Airports</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Wilson Airport &#8211; 10 Kilometres via jogoo roadand 14 Kilometres via Mombasa road</li>
+<li>JKIA &#8211; 14 Kilometres</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607659402265-12ba34c0-7513" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607659402265-12ba34c0-7513" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Recreation facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Buru Sports Ground</li>
+<li>Buruburu girls swimming pool</li>
+<li>Buruburu Primary Swimming Pool</li>
+<li>RABAI ROAD,SWIMMING POOL</li>
+<li>Kayole Dstv Football Recreation</li>
+<li>Umoja 1 Swimming pool</li>
+<li>Makongeni Sports Ground</li>
+<li>South c swimming pool</li>
+<li>Uhuru Estate phase 4 Play Field</li>
+<li>Jacaranda Grounds</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607659402354-4a5c04e5-b559" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607659402354-4a5c04e5-b559" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Banking facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li> Kenya Commercial Bank</li>
+<li>Co-operative</li>
+<li>Equity</li>
+<li>Stanbic Bank</li>
+<li>Chase Bank</li>
+<li>NIC bank</li>
+<li>Barclays bank</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607659402447-b3d416e1-ba89" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607659402447-b3d416e1-ba89" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Health facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Metropolitan Hospital Nairobi</li>
+<li>Meridian Medical Center-Buruburu</li>
+<li>Avenue Healthcare Hospital Buruburu</li>
+<li>Jamaa Mission Hospital</li>
+<li>The Mater Hospital-Buru Buru Clinic</li>
+<li>Buruburu Health Centre</li>
+<li>Bristol Park Hospital, Fedha</li>
+<li>Gertrude&#8217;s Children&#8217;s Hospital</li>
+<li>Haltons Pharmacy</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1608358754838-e9af264d-0bb3" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1608358754838-e9af264d-0bb3" data-vc-accordion data-vc-container=".vc_tta-container"><i class="vc_tta-icon fas fa-truck"></i><span class="vc_tta-title-text">Best Movers in Buruburu Nairobi</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>Packers and movers Kenya limited offer:-</p>
+<ul>
+<li><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/">Domestic House Shifting</a></li>
+<li><a href="https://packersandmoversltd.co.ke/office-relocations/">Office Relocations</a></li>
+<li>Settling in Services</li>
+<li><a href="https://packersandmoversltd.co.ke/cross-border-moves/">Cross border moves</a></li>
+<li><a href="https://packersandmoversltd.co.ke/international-relocation/">International Relocation</a></li>
+<li><a href="https://packersandmoversltd.co.ke/storage/">Storage</a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><h1 style="text-align: center;font-family:Ubuntu;font-weight:400;font-style:normal" class="vc_custom_heading vc_custom_1608359913158" >SOUTH C</h1></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><img loading="lazy" class="alignnone size-full wp-image-1897" src="images/south-c.jpg" alt="" width="706" height="418" srcset="images/south-c.jpg 706w, https://packersandmoversltd.co.ke/wp-content/uploads/2020/12/south-c-300x178.jpg 300w" sizes="(max-width: 706px) 100vw, 706px" />South C used to be refereded to as southside or South Compton is a middle-class residential estate located in the southland area of Nairobi located approximately 5 Kilometers to the south of Nairobi.<br />
+South C lies next to Wilson Airport. It is bordered by South B to the East, Langata Estate to the west and the Nairobi National Park to the south.</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-accordion vc_tta-color-pink vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left"><div class="vc_tta-panels-container"><div class="vc_tta-panels"><div class="vc_tta-panel vc_active" id="1607660064506-76d7f9bc-ee39" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607660064506-76d7f9bc-ee39" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Shopping Malls in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>The Nextgen Mall</li>
+<li>Mini Mall south c</li>
+<li>Green Valley shopping centre.</li>
+<li>Capital Centre</li>
+<li>ADEEGSAN STORE</li>
+<li>Nates Home (Bandari Villas Ph3) South C</li>
+<li>Nairobi West Shopping Centre</li>
+<li>T-Mall</li>
+<li>Highway Mall</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607660064608-ad5d03c1-f2f0" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607660064608-ad5d03c1-f2f0" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Education facilities in the Neighborhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Bellevue School</li>
+<li>Moi Educational Centre</li>
+<li>Kenya Industrial Research And Development</li>
+<li>UoN, Main Campus Sports Facilities</li>
+<li>Boma International Hospitality College</li>
+<li>Riara Springs Girls High School</li>
+<li>Fr baldo school</li>
+<li>Moi Girls School Nairobi</li>
+<li>Lenana High School</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1608358766039-1c5afe20-b003" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1608358766039-1c5afe20-b003" data-vc-accordion data-vc-container=".vc_tta-container"><i class="vc_tta-icon fas fa-truck"></i><span class="vc_tta-title-text">Best movers in South-C</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>Packers and movers Kenya limited offer:-</p>
+<ul>
+<li><a href="https://packersandmoversltd.co.ke/domestic-house-shifting/">Domestic House Shifting</a></li>
+<li><a href="https://packersandmoversltd.co.ke/office-relocations/">Office Relocations</a></li>
+<li>Settling in Services</li>
+<li><a href="https://packersandmoversltd.co.ke/cross-border-moves/">Cross border moves</a></li>
+<li><a href="https://packersandmoversltd.co.ke/international-relocation/">International Relocation</a></li>
+<li><a href="https://packersandmoversltd.co.ke/storage/">Storage</a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607660064703-6cd101a6-f16c" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607660064703-6cd101a6-f16c" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Worship places in the Neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Nairobi Chapel South Church</li>
+<li>Kenya Assemblies Of God Highway Church</li>
+<li>St. Catherine of Alexandria Catholic Church</li>
+<li>Nairobi Chapel South Offices</li>
+<li>Siri Gurdwara Ramgarhia Railway &#8211; South C</li>
+<li>ACK ST. PAUL&#8217;S NAIROBI PARISH</li>
+<li>Gospel Tabernacle Worship Centre</li>
+<li>Noor Mosque South C</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607660064814-15abac38-b0a2" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607660064814-15abac38-b0a2" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Access to Airports</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Wilson Airport: &#8211; 2.5 Kilometres via Five star road<br />
+&#8211; 6 Kilometres via Mombasa road</li>
+<li>JKIA – 20 Kilometres</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607660064913-4c559c25-dce5" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607660064913-4c559c25-dce5" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Recreation facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>MOW Swimming Pool</li>
+<li>Ministry Of Works Sports Club</li>
+<li>Mazoezi Gym</li>
+<li>YMCA South C</li>
+<li>Bellevue Primary School Swimming Pool</li>
+<li>Fitness 360</li>
+<li>St. Austin&#8217;s Academy Swimming Pool</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607660065005-d521c908-7965" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607660065005-d521c908-7965" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Banking facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>Co-operative Bank of Kenya</li>
+<li>National Bank</li>
+<li>KCB Advantage Bank</li>
+<li>I &amp; m bank atm &#8211; south c shopping centre</li>
+<li>PesaPoint POS Innscor Kenya Ltd</li>
+<li>Cooperative Bank</li>
+<li>Coop Bank &#8211; Mombasa Road Branch</li>
+<li>Standard Chartered Bank ATM</li>
+<li>KCB ATM &#8211; Capital Center</li>
+<li>Coop cash atm-belle vue</li>
+<li>KCB Bank</li>
+</ul>
+
+		</div>
+	</div>
+</div></div><div class="vc_tta-panel" id="1607660065101-c1d63015-1f8e" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title vc_tta-controls-icon-position-left"><a href="#1607660065101-c1d63015-1f8e" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Hospital facilities in the neighbourhood</span><i class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a></h4></div><div class="vc_tta-panel-body">
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<ul>
+<li>The Zambezi Hospital</li>
+<li>The Nairobi South Hospital</li>
+<li>AAR Healthcare, South C Clinic</li>
+<li>Medanta Africare-South C Clinic</li>
+<li>South B Hospital</li>
+<li>The Nairobi Hospital Outpatient Centre</li>
+<li>Mariakani Cottage Hospital</li>
+<li>Avenue Healthcare South C</li>
+<li>The Aga Khan University Hospital Outpatient</li>
+<li>The Nairobi West Hospital Ltd.</li>
+<li>South B Dental Centre</li>
+<li>Bristol Park Hospital, Fedha</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+	</div><!-- #content -->
+
+	
+
+
+			</div><!-- .wf-container -->
+		</div><!-- .wf-wrap -->
+
+	
+	</div><!-- #main -->
+
+	
+
+	
+	<!-- !Footer -->
+	<footer id="footer" class="footer solid-bg">
+
+		
+<!-- !Bottom-bar -->
+<div id="bottom-bar" class="solid-bg logo-left" role="contentinfo">
+    <div class="wf-wrap">
+        <div class="wf-container-bottom">
+
+			
+            <div class="wf-float-right">
+
+				<div class="bottom-text-block"><p>© Packers and movers ltd 2020. All rights reserved.</p>
+</div>
+            </div>
+
+        </div><!-- .wf-container-bottom -->
+    </div><!-- .wf-wrap -->
+</div><!-- #bottom-bar -->
+	</footer><!-- #footer -->
+
+
+	<a href="#" class="scroll-top"><span class="screen-reader-text">Go to Top</span></a>
+
+</div><!-- #page -->
+
+<script type="text/javascript">
+        jQuery(function(){
+        var arrLiveStats=[];
+        var WSM_PREFIX="wsm";
+		
+        jQuery(".if-js-closed").removeClass("if-js-closed").addClass("closed");
+                var wsmFnSiteLiveStats=function(){
+                           jQuery.ajax({
+                               type: "POST",
+                               url: wsm_ajaxObject.ajax_url,
+                               data: { action: 'liveSiteStats', requests: JSON.stringify(arrLiveStats), r: Math.random() }
+                           }).done(function( strResponse ) {
+                                if(strResponse!="No"){
+                                    arrResponse=JSON.parse(strResponse);
+                                    jQuery.each(arrResponse, function(key,value){
+                                    
+                                        $element= document.getElementById(key);
+                                        oldValue=parseInt($element.getAttribute("data-value").replace(/,/g, ""));
+                                        diff=parseInt(value.replace(/,/g, ""))-oldValue;
+                                        $class="";
+                                        
+                                        if(diff>=0){
+                                            diff="+"+diff;
+                                        }else{
+                                            $class="wmcRedBack";
+                                        }
+
+                                        $element.setAttribute("data-value",value);
+                                        $element.innerHTML=diff;
+                                        jQuery("#"+key).addClass($class).show().siblings(".wsmH2Number").text(value);
+                                        
+                                        if(key=="SiteUserOnline")
+                                        {
+                                            var onlineUserCnt = arrResponse.wsmSiteUserOnline;
+                                            if(jQuery("#wsmSiteUserOnline").length)
+                                            {
+                                                jQuery("#wsmSiteUserOnline").attr("data-value",onlineUserCnt);   jQuery("#wsmSiteUserOnline").next(".wsmH2Number").html("<a target=\"_blank\" href=\"?page=wsm_traffic&subPage=UsersOnline&subTab=summary\">"+onlineUserCnt+"</a>");
+                                            }
+                                        }
+                                    });
+                                    setTimeout(function() {
+                                        jQuery.each(arrResponse, function(key,value){
+                                            jQuery("#"+key).removeClass("wmcRedBack").hide();
+                                        });
+                                    }, 1500);
+                                }
+                           });
+                       }
+                       if(arrLiveStats.length>0){
+                          setInterval(wsmFnSiteLiveStats, 10000);
+                       }});
+        </script><script type="text/html" id="wpb-modifications"></script><div id="qlwapp" class="qlwapp-free qlwapp-button qlwapp-bottom-right qlwapp-all qlwapp-rounded">
+  <div class="qlwapp-container">
+        <a class="qlwapp-toggle" 
+       data-action="open" 
+       data-phone="254722644270" 
+       data-message="Hello! I&#039;m Chatting you from packers and movers website" href="javascript:void(0);" target="_blank">
+                <i class="qlwapp-icon qlwapp-whatsapp-icon"></i>
+            <i class="qlwapp-close" data-action="close">&times;</i>
+                <span class="qlwapp-text">Hi, lets Chat!</span>
+          </a>
+  </div>
+</div>
+<link rel='stylesheet' href='css/8409.css'>
+<link rel='stylesheet' href='css/js_composer_tta.min.css'>
+<link rel='stylesheet' href='css/v4-shims.min.css'>
+<link rel='stylesheet' href='css/all.min.css'>
+<script type='text/javascript' src='js/main.min.js' id='dt-main-js'></script>
+<script type='text/javascript' src='js/frontend.js' id='qlwapp-js'></script>
+<script type='text/javascript' src='js/wp-embed.min.js' id='wp-embed-js'></script>
+<script type='text/javascript' src='js/js_composer_front.min.js' id='wpb_composer_front_js-js'></script>
+<script type='text/javascript' src='js/vc-accordion.min.js' id='vc_accordion_script-js'></script>
+<script type='text/javascript' src='js/vc-tta-autoplay.min.js' id='vc_tta_autoplay_script-js'></script>
+<div id='icon_wrapper'><a target="_blank" class='fuse_social_icons_links' data-nonce='7465298b7c' data-title='facebook' href='https://web.facebook.com/PackersandMoversKenyaltd/'>	<i class='fa fa-facebook facebook-awesome-social awesome-social'></i></a><a target="_blank" class='fuse_social_icons_links' data-nonce='7465298b7c' data-title='youtube' href='https://www.youtube.com/channel/UCCwXtddZ1uUHDzgKR5wAmnw'>	<i class='fa fa-youtube youtube-awesome-social awesome-social'></i></a>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="pswp__bg"></div>
+	<div class="pswp__scroll-wrap">
+		<div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+		</div>
+		<div class="pswp__ui pswp__ui--hidden">
+			<div class="pswp__top-bar">
+				<div class="pswp__counter"></div>
+				<button class="pswp__button pswp__button--close" title="Close (Esc)" aria-label="Close (Esc)"></button>
+				<button class="pswp__button pswp__button--share" title="Share" aria-label="Share"></button>
+				<button class="pswp__button pswp__button--fs" title="Toggle fullscreen" aria-label="Toggle fullscreen"></button>
+				<button class="pswp__button pswp__button--zoom" title="Zoom in/out" aria-label="Zoom in/out"></button>
+				<div class="pswp__preloader">
+					<div class="pswp__preloader__icn">
+						<div class="pswp__preloader__cut">
+							<div class="pswp__preloader__donut"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				<div class="pswp__share-tooltip"></div> 
+			</div>
+			<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)" aria-label="Previous (arrow left)">
+			</button>
+			<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)" aria-label="Next (arrow right)">
+			</button>
+			<div class="pswp__caption">
+				<div class="pswp__caption__center"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+<!--This file was exported by "Export WP Page to Static HTML" plugin which created by ReCorp (https://myrecorp.com) -->
